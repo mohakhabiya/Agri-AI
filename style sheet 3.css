@@ -1,0 +1,23 @@
+:root {
+  --app-shell-navbar-width:0rem;
+  --app-shell-navbar-offset:0rem;
+  --app-shell-header-height:calc(2.625rem * var(--mantine-scale));
+  --app-shell-header-offset:calc(2.625rem * var(--mantine-scale));
+  --app-shell-padding:0px;
+}
+@media(min-width: 48em) {
+  :root {
+    --app-shell-navbar-width:calc(13.75rem * var(--mantine-scale));
+    --app-shell-navbar-offset:calc(13.75rem * var(--mantine-scale));
+    --app-shell-header-height:0rem;
+    --app-shell-header-offset:0rem;
+  }
+}
+@media(max-width: 47.99375em) {
+  :root {
+    --app-shell-navbar-width:100%;
+    --app-shell-navbar-offset:0px;
+    --app-shell-navbar-transform:translateX(calc(var(--app-shell-navbar-width) * -1));
+    --app-shell-navbar-transform-rtl:translateX(var(--app-shell-navbar-width));
+  }
+}

@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<html lang="en" data-mantine-color-scheme="light">
+<head>
+    <meta name="description" content="An AI-powered agricultural advisory platform that provides personalized farming recommendations for small and marginal farmers by integrating crop details, land conditions, current issues, and weather information.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="og:title" content="AgriAI Advisor">
+    <meta name="og:description" content="An AI-powered agricultural advisory platform that provides personalized farming recommendations for small and marginal farmers by integrating crop details, land conditions, current issues, and weather information.">
+    <meta name="og:image" content="/og-img/2efAzvu9i">
+    <meta charset="utf-8">
+    <meta name="user-status" value="anonymous">
+    <meta name="stage-name" value="prod">
+    <meta name="llm-username" value="">
+    <meta name="useDataForServiceImprovement" value="null">
+    <meta name="nonce" value="CO1yfj6oDCqzGJyKFgYxZQ==">
+    <meta property="csp-nonce" nonce="">
+    <meta name="assetsHashPrefix" value="9b701471f43f55c81eff">
+    <meta name="rum-config" value="{&quot;guestRoleArn&quot;:&quot;arn:aws:iam::915417107451:role/PartyRock-prod-AppCloudwatchRumIdentityPoolUnauthe-1IFECG8INU7YU&quot;,&quot;identityPoolId&quot;:&quot;us-east-1:8c8cd43d-404c-4034-8912-89744e0100f6&quot;,&quot;applicationId&quot;:&quot;0c01bad7-9ae0-419b-8575-b7bb9be4f03c&quot;,&quot;region&quot;:&quot;us-east-1&quot;}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content">
+    <meta name="cognito-domain" value="https://partyrock-prod-us-east-1.auth.us-east-1.amazoncognito.com">
+    <meta name="viewer-data" value="{&quot;city&quot;:&quot;Pune&quot;,&quot;country&quot;:&quot;IN&quot;}">
+        <meta name="captcha-api-key" value="NcbTA2HVRjvm7SLW2SDe7Mu/VHdvi9RCd1GYSbWg/ijXLUeqvh3CSc3oyVh8E7veuD51RdVB86A4fPnLpJoRAWz60USrswireAL19DHsBIPNPVwxxNeGY5tD/bm1SKaospgk408V2N8pTRZJH7dpdfmbyA4YUv7Y4yMAElLM4l1QnTnMXmSN4v2Vbk+gLYPfYyMhy3ezqkaj4Daa/FXNQpUXn5dwWqwdmoX3BUneGZhZ2FaXXXPFfLXws+Fiw/w3mDY9BEbK8GtzY1T7+Puk1hokuqhB9EGXtUlgNhPjnr5C8RlV08EZKB/ktA8JxpnGHtnALAwhRlxCnobT45a+mhRuonxzpW6Ulhuxp5xERSPmiv2qXn15z1xRbRb8E3f+04U/VjKVRwVF5huD1boIYplHGowhyYyqUIDHZjUg5s9/YmTk7WQ5j4Mj0I7/9ZZhYpOaqVHQ2GzkM4tDPT85xpm2htOb9e9GknvA2SsGn0I5eL/+rnXh8TO11GNY3CQtxF1dOzsmqiN8BPreXPNluc1hqwwemSYOqT4ebiIO3YYnALoA37UVDvu9kNt5vPtNCBLVUBDiK7AqRoPgC2N+94lSlBpFFOqInWSRcN1hOU4dqtPWC38BGxDRGsk8ungxDsm5eWaNZaAZsWl1VFy4tc/BQr5J2sQ10L3jJKXeUeQ=_1_1">
+                              <meta name="marketo-config" value="{&quot;baseUrl&quot;:&quot;https://pages.awscloud.com&quot;,&quot;munchkinId&quot;:&quot;112-TZM-766&quot;,&quot;formId&quot;:70202}">
+    
+    <link rel="icon" type="image/x-icon" href="/assets/9b701471f43f55c81eff/favicon.ico">
+  
+    <link rel="preload" href="/assets/9b701471f43f55c81eff/fonts/dm-sans-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/9b701471f43f55c81eff/fonts/dm-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/9b701471f43f55c81eff/fonts/dm-sans-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/9b701471f43f55c81eff/fonts/dm-sans-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/9b701471f43f55c81eff/fonts/dm-sans-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/9b701471f43f55c81eff/fonts/dm-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/9b701471f43f55c81eff/fonts/dm-mono-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+          <script defer="" type="text/javascript" nonce="" src="https://aaeb641c9260.edge.captcha-sdk.awswaf.com/aaeb641c9260/jsapi.js" data-awswaf-challenge-compact=""></script>
+        
+                <script async="" nonce="" src="https://pages.awscloud.com/js/forms2/js/forms2.min.js"></script>
+    
+    <style nonce="">
+
+      @font-face {
+        font-family: "DM Sans";
+        font-style: normal;
+        font-weight: 300;
+        src: url("/assets/9b701471f43f55c81eff/fonts/dm-sans-latin-300-normal.woff2") format("woff2");
+        font-display: swap;
+      }
+
+
+      @font-face {
+        font-family: "DM Sans";
+        font-style: normal;
+        font-weight: 400;
+        src: url("/assets/9b701471f43f55c81eff/fonts/dm-sans-latin-400-normal.woff2") format("woff2");
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "DM Sans";
+        font-style: normal;
+        font-weight: 500;
+        src: url("/assets/9b701471f43f55c81eff/fonts/dm-sans-latin-500-normal.woff2") format("woff2");
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "DM Sans";
+        font-style: normal;
+        font-weight: 600;
+        src: url("/assets/9b701471f43f55c81eff/fonts/dm-sans-latin-600-normal.woff2") format("woff2");
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "DM Sans";
+        font-style: normal;
+        font-weight: 700;
+        src: url("/assets/9b701471f43f55c81eff/fonts/dm-sans-latin-700-normal.woff2") format("woff2");
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "DM Mono";
+        src: url("/assets/9b701471f43f55c81eff/fonts/dm-mono-latin-400-normal.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "DM Mono";
+        src: url("/assets/9b701471f43f55c81eff/fonts/dm-mono-latin-500-normal.woff2") format("woff2");
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @layer core, extensions, global, theme;
+    </style>
+  <script src="https://aaeb641c9260.e01bc68a.ap-south-1.token.awswaf.com/aaeb641c9260/challenge.compact.js"></script><link rel="modulepreload" as="script" crossorigin="" href="/website/9b701471f43f55c81eff/AppViewRouter.js" nonce=""><link rel="modulepreload" as="script" crossorigin="" href="/website/9b701471f43f55c81eff/EditVariableModal.js" nonce=""><link rel="stylesheet" crossorigin="" href="/website/9b701471f43f55c81eff/EditVariableModal.css" nonce=""><link rel="modulepreload" as="script" crossorigin="" href="/website/9b701471f43f55c81eff/ShareIcon.js" nonce=""><link rel="modulepreload" as="script" crossorigin="" href="/website/9b701471f43f55c81eff/index4.js" nonce=""><link rel="modulepreload" as="script" crossorigin="" href="/website/9b701471f43f55c81eff/IconPlus.js" nonce=""><link rel="stylesheet" crossorigin="" href="/website/9b701471f43f55c81eff/AppViewRouter.css" nonce=""><title>PartyRock | AgriAI Advisor</title><link rel="modulepreload" as="script" crossorigin="" href="/website/9b701471f43f55c81eff/Markdown.js" nonce=""><link rel="stylesheet" crossorigin="" href="/website/9b701471f43f55c81eff/Markdown.css" nonce="">
+</head>
+
+
+
+<body>
+<div id="awsccc-sb-ux-c">
+  <div id="awsccc-sb-a" class="">
+    <div data-id="awsccc-cb" style="display: none;">
+      <div id="awsccc-cb-c" data-id="awsccc-cb-tabstart" class="awsccc-tab-helper" tabindex="-1">
+        <div id="awsccc-cb-content">
+          <div id="awsccc-cb-text-section">
+            <h2 id="awsccc-cb-title">Select your cookie preferences</h2>
+            <p id="awsccc-cb-text">
+              <span>We use essential cookies and similar tools that are necessary to provide our site and services. We use performance cookies to collect anonymous statistics, so we can understand how customers use our site and make improvements. Essential cookies cannot be deactivated, but you can choose “Customize” or “Decline” to decline performance cookies. <br>
+                <br> If you agree, AWS and approved third parties will also use cookies to provide useful site features, remember your preferences, and display relevant content, including relevant advertising. To accept or decline all non-essential cookies, choose “Accept” or “Decline.” To make more detailed choices, choose “Customize.” </span>
+            </p>
+          </div>
+          <div id="awsccc-cb-actions">
+            <div id="awsccc-cb-buttons">
+              <button tabindex="0" type="submit" data-id="awsccc-cb-btn-accept" aria-label="Accept all cookies" class="awsccc-u-btn awsccc-u-btn-primary">
+                <span>Accept</span>
+              </button>
+              <button tabindex="0" type="submit" data-id="awsccc-cb-btn-decline" aria-label="Continue without accepting" class="awsccc-u-btn awsccc-u-btn-secondary">
+                <span>Decline</span>
+              </button>
+              <button tabindex="0" type="submit" data-id="awsccc-cb-btn-customize" aria-label="Customize cookie preferences" class="awsccc-u-btn awsccc-u-btn-secondary">
+                <span>Customize</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="awsccc-cs" data-id="awsccc-cs" style="display: none;" tabindex="0" class="">
+      <div class="awsccc-u-modal-container ">
+        <div class="awsccc-u-modal awsccc-u-modal-large" role="dialog" aria-modal="true" aria-labelledby="awsccc-u-modal-header-awsccc-cs" dir="ltr" data-awsccc-modal-toggle="true" data-id="awsccc-cs-tabtrap" tabindex="-1">
+          <div class="awsccc-u-modal-header">
+            <h2 id="awsccc-u-modal-header-awsccc-cs">
+              <span id="awsccc-cs-title">Customize cookie preferences</span>
+            </h2>
+          </div>
+          <div class="awsccc-u-modal-content">
+            <div class="awsccc-u-cl ">
+              <div class="awsccc-u-cl-c">
+                <div id="awsccc-cs-info-container">
+                  <span>We use cookies and similar tools (collectively, "cookies") for the following purposes.</span>
+                </div>
+              </div>
+              <div class="awsccc-u-cl-c">
+                <div data-category="essential" class="awsccc-cs-sec-container">
+                  <h3 class="awsccc-cs-s-title">Essential</h3>
+                  <div class="awsccc-cs-s-text">
+                    <p class="awsccc-cs-s-paragraph">Essential cookies are necessary to provide our site and services and cannot be deactivated. They are usually set in response to your actions on the site, such as setting your privacy preferences, signing in, or filling in forms. </p>
+                  </div>
+                  <div class="awsccc-cs-s-action"></div>
+                </div>
+              </div>
+              <div class="awsccc-u-cl-c">
+                <div data-category="performance" class="awsccc-cs-sec-container">
+                  <h3 class="awsccc-cs-s-title">Performance</h3>
+                  <div class="awsccc-cs-s-text">
+                    <p class="awsccc-cs-s-paragraph">Performance cookies provide anonymous statistics about how customers navigate our site so we can improve site experience and performance. Approved third parties may perform analytics on our behalf, but they cannot use the data for their own purposes.</p>
+                  </div>
+                  <div class="awsccc-cs-s-action">
+                    <div>
+                      <div class="awsccc-cs-s-cb-outer">
+                        <div class="awscc-u-cb-checkbox-container" data-id="awsccc-u-cb-performance-container">
+                          <label data-id="awsccc-u-cb-performance-label" class="awsccc-u-cb-label">
+                            <input id="awsccc-u-cb-performance" class="awsccc-u-cb-input" type="checkbox" aria-checked="false" aria-label="Allow performance category Allowed" aria-description="Allow performance category">
+                            <svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" class="awscc-u-cb-checkbox">
+                              <rect class="awscc-u-cb-checkbox-rect" x="0.5" y="0.5" rx="1.5" ry="1.5" width="13" height="13"></rect>
+                              <polyline class="awscc-u-cb-checkbox-poly-line " points="2.5,7 6,10 11,3"></polyline>
+                            </svg>
+                          </label>
+                        </div>
+                      </div>
+                      <span class="awsccc-u-cb-text">Allowed</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="awsccc-u-cl-c">
+                <div data-category="functional" class="awsccc-cs-sec-container">
+                  <h3 class="awsccc-cs-s-title">Functional</h3>
+                  <div class="awsccc-cs-s-text">
+                    <p class="awsccc-cs-s-paragraph">Functional cookies help us provide useful site features, remember your preferences, and display relevant content. Approved third parties may set these cookies to provide certain site features. If you do not allow these cookies, then some or all of these services may not function properly.</p>
+                  </div>
+                  <div class="awsccc-cs-s-action">
+                    <div>
+                      <div class="awsccc-cs-s-cb-outer">
+                        <div class="awscc-u-cb-checkbox-container" data-id="awsccc-u-cb-functional-container">
+                          <label data-id="awsccc-u-cb-functional-label" class="awsccc-u-cb-label">
+                            <input id="awsccc-u-cb-functional" class="awsccc-u-cb-input" type="checkbox" aria-checked="false" aria-label="Allow functional category Allowed" aria-description="Allow functional category">
+                            <svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" class="awscc-u-cb-checkbox">
+                              <rect class="awscc-u-cb-checkbox-rect" x="0.5" y="0.5" rx="1.5" ry="1.5" width="13" height="13"></rect>
+                              <polyline class="awscc-u-cb-checkbox-poly-line " points="2.5,7 6,10 11,3"></polyline>
+                            </svg>
+                          </label>
+                        </div>
+                      </div>
+                      <span class="awsccc-u-cb-text">Allowed</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="awsccc-u-cl-c">
+                <div data-category="advertising" class="awsccc-cs-sec-container">
+                  <h3 class="awsccc-cs-s-title">Advertising</h3>
+                  <div class="awsccc-cs-s-text">
+                    <p class="awsccc-cs-s-paragraph">Advertising cookies may be set through our site by us or our advertising partners and help us deliver relevant marketing content. If you do not allow these cookies, you will experience less relevant advertising.</p>
+                  </div>
+                  <div class="awsccc-cs-s-action">
+                    <div>
+                      <div class="awsccc-cs-s-cb-outer">
+                        <div class="awscc-u-cb-checkbox-container" data-id="awsccc-u-cb-advertising-container">
+                          <label data-id="awsccc-u-cb-advertising-label" class="awsccc-u-cb-label">
+                            <input id="awsccc-u-cb-advertising" class="awsccc-u-cb-input" type="checkbox" aria-checked="false" aria-label="Allow advertising category Allowed" aria-description="Allow advertising category">
+                            <svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" class="awscc-u-cb-checkbox">
+                              <rect class="awscc-u-cb-checkbox-rect" x="0.5" y="0.5" rx="1.5" ry="1.5" width="13" height="13"></rect>
+                              <polyline class="awscc-u-cb-checkbox-poly-line " points="2.5,7 6,10 11,3"></polyline>
+                            </svg>
+                          </label>
+                        </div>
+                      </div>
+                      <span class="awsccc-u-cb-text">Allowed</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="awsccc-u-cl-c">
+                <div id="awsccc-cs-l-container">
+                  <p>
+                    <span>Blocking some types of cookies may impact your experience of our sites. You may review and change your choices at any time by selecting Cookie preferences in the footer of this site. We and selected third-parties use cookies or similar technologies as specified in the&nbsp; <a data-id="awsccc-cs-f-notice" href="https://aws.amazon.com/legal/cookies/" target="_blank" rel="noopener noreferrer">
+                        <span>AWS Cookie Notice <span aria-label="Opens in a new Window" role="img" class="awsccc-u-i-open-c">
+                            <svg class="awsccc-u-i-open" viewBox="0 0 16 16" focusable="false" aria-hidden="true">
+                              <path class="awsccc-stroke-linecap-square" d="M10 2h4v4"></path>
+                              <path d="M6 10l8-8"></path>
+                              <path class="awsccc-stroke-linejoin-round" d="M14 9.048V14H2V2h5"></path>
+                            </svg>
+                          </span>
+                        </span>
+                      </a>. </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="awsccc-u-modal-footer">
+            <div class="awsccc-u-sb awsccc-u-sb-xs awsccc-u-sb-h ">
+              <button tabindex="0" type="submit" data-id="awsccc-cs-btn-cancel" aria-label="Cancel customizing cookie preferences" class="awsccc-u-btn awsccc-u-btn-secondary">
+                <span>Cancel</span>
+              </button>
+              <button tabindex="0" type="submit" data-id="awsccc-cs-btn-save" aria-label="Save customized cookie preferences" class="awsccc-u-btn awsccc-u-btn-primary">
+                <span>Save preferences</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="awsccc-u-modal-backdrop"></div>
+      </div>
+    </div>
+    <div id="awsccc-ccba-modal" data-id="awsccc-ccba-modal" style="display: none;" tabindex="0" class="">
+      <div class="awsccc-u-modal-container ">
+        <div class="awsccc-u-modal awsccc-u-modal-large" role="dialog" aria-modal="true" aria-labelledby="awsccc-u-modal-header-awsccc-ccba-modal" dir="ltr" data-awsccc-modal-toggle="true" data-id="awsccc-cs-tabtrap" tabindex="-1">
+          <div class="awsccc-u-modal-header">
+            <h2 id="awsccc-u-modal-header-awsccc-ccba-modal">
+              <span id="ccba-header">Your privacy choices</span>
+            </h2>
+          </div>
+          <div class="awsccc-u-modal-content">
+            <div data-testid="ccba-content" class="awsccc-u-cl awsccc-cbbas-c">
+              <div class="awsccc-u-cl-c">
+                <div class="awsccc-u-sb awsccc-u-sb-m awsccc-u-sb-v ">
+                  <p>We and our advertising partners (“we”) may use information we collect from or about you to show you ads on other websites and online services. Under certain laws, this activity is referred to as “cross-context behavioral advertising” or “targeted advertising.”</p>
+                  <p>
+                    <span>To opt out of our use of cookies or similar technologies to engage in these activities, select “Opt out of cross-context behavioral ads” and “Save preferences” below. If you clear your browser cookies or visit this site from a different device or browser, you will need to make your selection again. For more information about cookies and how we use them, read our&nbsp; <a class="awsccc-u-link" href="https://aws.amazon.com/legal/cookies/" target="_blank" rel="noopener noreferrer" data-id="awsccc-ccba-c-notice">
+                        <span>Cookie Notice</span>
+                        <span aria-label="" role="img" class="awsccc-u-i-open-c">
+                          <svg class="awsccc-u-i-open" viewBox="0 0 16 16" focusable="false" aria-hidden="true">
+                            <path class="awsccc-stroke-linecap-square" d="M10 2h4v4"></path>
+                            <path d="M6 10l8-8"></path>
+                            <path class="awsccc-stroke-linejoin-round" d="M14 9.048V14H2V2h5"></path>
+                          </svg>
+                        </span>
+                      </a>. </span>
+                  </p>
+                </div>
+              </div>
+              <div class="awsccc-u-cl-c">
+                <div class="awsccc-u-field">
+                  <label>
+                    <span class="awsccc-u-field-label"></span>
+                    <div class="awsccc-u-field-input">
+                      <div class="awsccc-u-rg" role="radiogroup">
+                        <div class="awsccc-u-sb awsccc-u-sb-xxs awsccc-u-sb-v ">
+                          <label>
+                            <input type="radio" name="awsccc-u-rg-ccba-allowed" value="allowed" checked="true">
+                            <span class="awsccc-u-rg-radio"></span>
+                            <span>Allow cross-context behavioral ads</span>
+                          </label>
+                          <label>
+                            <input type="radio" name="awsccc-u-rg-ccba-allowed" value="not allowed">
+                            <span class="awsccc-u-rg-radio"></span>
+                            <span>Opt out of cross-context behavioral ads</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="awsccc-u-cl-c">
+                <div class="awsccc-u-sb awsccc-u-sb-s awsccc-u-sb-v ">
+                  <p>
+                    <span>To opt out of the use of other identifiers, such as contact information, for these activities, fill out the form&nbsp; <a class="awsccc-u-link" href="https://pulse.aws/application/ZRPLWLL6?p=0" target="_blank" rel="noopener noreferrer" data-id="awsccc-ccba-e-form">
+                        <span>here</span>
+                        <span aria-label="" role="img" class="awsccc-u-i-open-c">
+                          <svg class="awsccc-u-i-open" viewBox="0 0 16 16" focusable="false" aria-hidden="true">
+                            <path class="awsccc-stroke-linecap-square" d="M10 2h4v4"></path>
+                            <path d="M6 10l8-8"></path>
+                            <path class="awsccc-stroke-linejoin-round" d="M14 9.048V14H2V2h5"></path>
+                          </svg>
+                        </span>
+                      </a>. </span>
+                  </p>
+                  <p>
+                    <span>For more information about how AWS handles your information, read the&nbsp; <a class="awsccc-u-link" href="https://aws.amazon.com/privacy/" target="_blank" rel="noopener noreferrer" data-id="awsccc-ccba-p-notice">
+                        <span>AWS Privacy Notice</span>
+                        <span aria-label="" role="img" class="awsccc-u-i-open-c">
+                          <svg class="awsccc-u-i-open" viewBox="0 0 16 16" focusable="false" aria-hidden="true">
+                            <path class="awsccc-stroke-linecap-square" d="M10 2h4v4"></path>
+                            <path d="M6 10l8-8"></path>
+                            <path class="awsccc-stroke-linejoin-round" d="M14 9.048V14H2V2h5"></path>
+                          </svg>
+                        </span>
+                      </a>. </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="awsccc-u-modal-footer">
+            <div id="ccba-footer" data-testid="ccba-footer">
+              <div class="awsccc-u-sb awsccc-u-sb-xs awsccc-u-sb-h ">
+                <button tabindex="0" type="submit" data-testid="cancel-button" class="awsccc-u-btn awsccc-u-btn-secondary">
+                  <span>Cancel</span>
+                </button>
+                <button tabindex="0" type="submit" class="awsccc-u-btn awsccc-u-btn-primary">
+                  <span>Save preferences</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="awsccc-u-modal-backdrop"></div>
+      </div>
+    </div>
+    <div id="awsccc-em-modal" data-id="awsccc-em-modal" style="display: none;" tabindex="0" class="">
+      <div class="awsccc-u-modal-container ">
+        <div class="awsccc-u-modal awsccc-u-modal-large" role="dialog" aria-modal="true" aria-labelledby="awsccc-u-modal-header-awsccc-em-modal" dir="ltr" data-awsccc-modal-toggle="true" data-id="awsccc-cs-tabtrap" tabindex="-1">
+          <div class="awsccc-u-modal-header">
+            <h2 id="awsccc-u-modal-header-awsccc-em-modal">
+              <span id="awsccc-em-title">Unable to save cookie preferences</span>
+            </h2>
+          </div>
+          <div class="awsccc-u-modal-content">
+            <div id="awsccc-em-modalBody">
+              <p id="awsccc-emm-paragraph">
+                <span>We will only store essential cookies at this time, because we were unable to save your cookie preferences. <br>
+                  <br>If you want to change your cookie preferences, try again later using the link in the AWS console footer, or contact support if the problem persists. </span>
+              </p>
+            </div>
+          </div>
+          <div class="awsccc-u-modal-footer">
+            <div id="awsccc-em-f-c" class="awsccc-u-sb awsccc-u-sb-xs awsccc-u-sb-h ">
+              <button tabindex="0" type="submit" data-id="awsccc-em-btn-dismiss" aria-label="Dismiss error message modal" class="awsccc-u-btn awsccc-u-btn-primary">
+                <span>Dismiss</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="awsccc-u-modal-backdrop"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="root">
+  <style data-mantine-styles="true" nonce="">
+    :root {
+      --mantine-color-black: #141414;
+      --mantine-font-family: DM Sans, sans-serif;
+      --mantine-font-family-headings: DM Sans, sans-serif;
+      --mantine-primary-color-filled: var(--mantine-color-lime-filled);
+      --mantine-primary-color-filled-hover: var(--mantine-color-lime-filled-hover);
+      --mantine-primary-color-light: var(--mantine-color-lime-light);
+      --mantine-primary-color-light-hover: var(--mantine-color-lime-light-hover);
+      --mantine-primary-color-light-color: var(--mantine-color-lime-light-color);
+      --mantine-breakpoint-xxs: 28.75em;
+      --mantine-breakpoint-x3s: 23.75em;
+      --mantine-spacing-xs: calc(0.5rem * var(--mantine-scale));
+      --mantine-spacing-xl: calc(1.5rem * var(--mantine-scale));
+      --mantine-spacing-x5s: calc(0.125rem * var(--mantine-scale));
+      --mantine-spacing-x4s: calc(0.1875rem * var(--mantine-scale));
+      --mantine-spacing-x3s: calc(0.25rem * var(--mantine-scale));
+      --mantine-spacing-xxs: calc(0.375rem * var(--mantine-scale));
+      --mantine-spacing-xxl: calc(2rem * var(--mantine-scale));
+      --mantine-spacing-x3l: calc(2.25rem * var(--mantine-scale));
+      --mantine-spacing-x4l: calc(2.5rem * var(--mantine-scale));
+      --mantine-spacing-x5l: calc(3.65rem * var(--mantine-scale));
+      --mantine-font-size-xxs: calc(0.625rem * var(--mantine-scale));
+      --mantine-font-size-xxl: calc(1.5rem * var(--mantine-scale));
+      --mantine-font-size-x3l: calc(1.875rem * var(--mantine-scale));
+      --mantine-font-size-x4l: calc(3rem * var(--mantine-scale));
+      --mantine-shadow-retro: var(--retro-shadow-size) var(--retro-shadow-size);
+      --mantine-shadow-floating: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      --mantine-radius-md: calc(0.625rem * var(--mantine-scale));
+      --mantine-radius-xxl: calc(3rem * var(--mantine-scale));
+      --mantine-primary-color-0: var(--mantine-color-lime-0);
+      --mantine-primary-color-1: var(--mantine-color-lime-1);
+      --mantine-primary-color-2: var(--mantine-color-lime-2);
+      --mantine-primary-color-3: var(--mantine-color-lime-3);
+      --mantine-primary-color-4: var(--mantine-color-lime-4);
+      --mantine-primary-color-5: var(--mantine-color-lime-5);
+      --mantine-primary-color-6: var(--mantine-color-lime-6);
+      --mantine-primary-color-7: var(--mantine-color-lime-7);
+      --mantine-primary-color-8: var(--mantine-color-lime-8);
+      --mantine-primary-color-9: var(--mantine-color-lime-9);
+      --mantine-color-gray-0: #F0F0F0;
+      --mantine-color-gray-1: #FFC0CB;
+      --mantine-color-gray-2: #EDEDED;
+      --mantine-color-gray-3: #E4E4E4;
+      --mantine-color-gray-4: #D9D9D9;
+      --mantine-color-gray-5: #BFBFBF;
+      --mantine-color-gray-6: #FFC0CB;
+      --mantine-color-gray-7: #767676;
+      --mantine-color-gray-8: #666666;
+      --mantine-color-gray-9: #141414;
+      --mantine-color-red-0: #F58E8E;
+      --mantine-color-red-1: #FFE1E1;
+      --mantine-color-red-2: #FFC0CB;
+      --mantine-color-red-3: #FFC0CB;
+      --mantine-color-red-4: #FFC0CB;
+      --mantine-color-red-5: #FFC0CB;
+      --mantine-color-red-6: #FFC0CB;
+      --mantine-color-red-7: #FFC0CB;
+      --mantine-color-red-8: #FFC0CB;
+      --mantine-color-red-9: #C90A08;
+      --mantine-color-teal-0: #FFC0CB;
+      --mantine-color-teal-1: #FFC0CB;
+      --mantine-color-teal-2: #FFC0CB;
+      --mantine-color-teal-3: #ADFFD7;
+      --mantine-color-teal-4: #5CFFB0;
+      --mantine-color-teal-5: #32FF9C;
+      --mantine-color-teal-6: #00FF84;
+      --mantine-color-teal-7: #00E276;
+      --mantine-color-teal-8: #FFC0CB;
+      --mantine-color-teal-9: #FFC0CB;
+      --mantine-color-lime-0: #FFC0CB;
+      --mantine-color-lime-1: #FFC0CB;
+      --mantine-color-lime-2: #FFC0CB;
+      --mantine-color-lime-3: #E9FFAD;
+      --mantine-color-lime-4: #D3FF5C;
+      --mantine-color-lime-5: #C5FF32;
+      --mantine-color-lime-6: #BDFF00;
+      --mantine-color-lime-7: #A6E200;
+      --mantine-color-lime-8: #FFC0CB;
+      --mantine-color-lime-9: #FFC0CB;
+      --mantine-color-cream-0: #F6F4EB;
+      --mantine-color-cream-1: #F8F7F1;
+      --mantine-color-cream-2: #F3F1E5;
+      --mantine-color-cream-3: #EEEBDD;
+      --mantine-color-cream-4: #EAE4D8;
+      --mantine-color-cream-5: #D8CFBF;
+      --mantine-color-cream-6: #BEB39D;
+      --mantine-color-cream-7: #FFC0CB;
+      --mantine-color-cream-8: #726755;
+      --mantine-color-cream-9: #FFC0CB;
+      --mantine-h1-font-size: 3rem;
+      --mantine-h1-line-height: 3rem;
+      --mantine-h1-font-weight: 300;
+      --mantine-h2-font-size: 2rem;
+      --mantine-h2-font-weight: 300;
+      --mantine-h3-font-size: 1.5rem;
+      --mantine-h3-font-weight: 400;
+      --mantine-h4-font-size: 1.125rem;
+    }
+
+    :root[data-mantine-color-scheme="dark"] {
+      --mantine-color-anchor: var(--mantine-color-lime-4);
+      --mantine-color-dark-filled: var(--mantine-color-dark-7);
+      --mantine-color-dark-filled-hover: var(--mantine-color-dark-8);
+      --mantine-color-dark-light: rgba(59, 59, 59, 0.15);
+      --mantine-color-dark-light-hover: rgba(59, 59, 59, 0.2);
+      --mantine-color-dark-light-color: var(--mantine-color-dark-2);
+      --mantine-color-dark-outline: var(--mantine-color-dark-3);
+      --mantine-color-dark-outline-hover: rgba(105, 105, 105, 0.05);
+      --mantine-color-gray-filled: var(--mantine-color-gray-7);
+      --mantine-color-gray-filled-hover: var(--mantine-color-gray-8);
+      --mantine-color-gray-light: rgba(191, 191, 191, 0.15);
+      --mantine-color-gray-light-hover: rgba(191, 191, 191, 0.2);
+      --mantine-color-gray-light-color: var(--mantine-color-gray-2);
+      --mantine-color-gray-outline: var(--mantine-color-gray-3);
+      --mantine-color-gray-outline-hover: rgba(228, 228, 228, 0.05);
+      --mantine-color-red-filled: var(--mantine-color-red-7);
+      --mantine-color-red-filled-hover: var(--mantine-color-red-8);
+      --mantine-color-red-light: rgba(255, 192, 203, 0.15);
+      --mantine-color-red-light-hover: rgba(255, 192, 203, 0.2);
+      --mantine-color-red-light-color: var(--mantine-color-red-2);
+      --mantine-color-red-outline: var(--mantine-color-red-3);
+      --mantine-color-red-outline-hover: rgba(255, 192, 203, 0.05);
+      --mantine-color-pink-filled: var(--mantine-color-pink-7);
+      --mantine-color-pink-filled-hover: var(--mantine-color-pink-8);
+      --mantine-color-pink-light: rgba(240, 101, 149, 0.15);
+      --mantine-color-pink-light-hover: rgba(240, 101, 149, 0.2);
+      --mantine-color-pink-light-color: var(--mantine-color-pink-2);
+      --mantine-color-pink-outline: var(--mantine-color-pink-3);
+      --mantine-color-pink-outline-hover: rgba(250, 162, 193, 0.05);
+      --mantine-color-grape-filled: var(--mantine-color-grape-7);
+      --mantine-color-grape-filled-hover: var(--mantine-color-grape-8);
+      --mantine-color-grape-light: rgba(204, 93, 232, 0.15);
+      --mantine-color-grape-light-hover: rgba(204, 93, 232, 0.2);
+      --mantine-color-grape-light-color: var(--mantine-color-grape-2);
+      --mantine-color-grape-outline: var(--mantine-color-grape-3);
+      --mantine-color-grape-outline-hover: rgba(229, 153, 247, 0.05);
+      --mantine-color-violet-filled: var(--mantine-color-violet-7);
+      --mantine-color-violet-filled-hover: var(--mantine-color-violet-8);
+      --mantine-color-violet-light: rgba(132, 94, 247, 0.15);
+      --mantine-color-violet-light-hover: rgba(132, 94, 247, 0.2);
+      --mantine-color-violet-light-color: var(--mantine-color-violet-2);
+      --mantine-color-violet-outline: var(--mantine-color-violet-3);
+      --mantine-color-violet-outline-hover: rgba(177, 151, 252, 0.05);
+      --mantine-color-indigo-filled: var(--mantine-color-indigo-7);
+      --mantine-color-indigo-filled-hover: var(--mantine-color-indigo-8);
+      --mantine-color-indigo-light: rgba(92, 124, 250, 0.15);
+      --mantine-color-indigo-light-hover: rgba(92, 124, 250, 0.2);
+      --mantine-color-indigo-light-color: var(--mantine-color-indigo-2);
+      --mantine-color-indigo-outline: var(--mantine-color-indigo-3);
+      --mantine-color-indigo-outline-hover: rgba(145, 167, 255, 0.05);
+      --mantine-color-blue-filled: var(--mantine-color-blue-7);
+      --mantine-color-blue-filled-hover: var(--mantine-color-blue-8);
+      --mantine-color-blue-light: rgba(51, 154, 240, 0.15);
+      --mantine-color-blue-light-hover: rgba(51, 154, 240, 0.2);
+      --mantine-color-blue-light-color: var(--mantine-color-blue-2);
+      --mantine-color-blue-outline: var(--mantine-color-blue-3);
+      --mantine-color-blue-outline-hover: rgba(116, 192, 252, 0.05);
+      --mantine-color-cyan-filled: var(--mantine-color-cyan-7);
+      --mantine-color-cyan-filled-hover: var(--mantine-color-cyan-8);
+      --mantine-color-cyan-light: rgba(34, 184, 207, 0.15);
+      --mantine-color-cyan-light-hover: rgba(34, 184, 207, 0.2);
+      --mantine-color-cyan-light-color: var(--mantine-color-cyan-2);
+      --mantine-color-cyan-outline: var(--mantine-color-cyan-3);
+      --mantine-color-cyan-outline-hover: rgba(102, 217, 232, 0.05);
+      --mantine-color-teal-filled: var(--mantine-color-teal-7);
+      --mantine-color-teal-filled-hover: var(--mantine-color-teal-8);
+      --mantine-color-teal-light: rgba(50, 255, 156, 0.15);
+      --mantine-color-teal-light-hover: rgba(50, 255, 156, 0.2);
+      --mantine-color-teal-light-color: var(--mantine-color-teal-2);
+      --mantine-color-teal-outline: var(--mantine-color-teal-3);
+      --mantine-color-teal-outline-hover: rgba(173, 255, 215, 0.05);
+      --mantine-color-green-filled: var(--mantine-color-green-7);
+      --mantine-color-green-filled-hover: var(--mantine-color-green-8);
+      --mantine-color-green-light: rgba(81, 207, 102, 0.15);
+      --mantine-color-green-light-hover: rgba(81, 207, 102, 0.2);
+      --mantine-color-green-light-color: var(--mantine-color-green-2);
+      --mantine-color-green-outline: var(--mantine-color-green-3);
+      --mantine-color-green-outline-hover: rgba(140, 233, 154, 0.05);
+      --mantine-color-lime-filled: var(--mantine-color-lime-7);
+      --mantine-color-lime-filled-hover: var(--mantine-color-lime-8);
+      --mantine-color-lime-light: rgba(197, 255, 50, 0.15);
+      --mantine-color-lime-light-hover: rgba(197, 255, 50, 0.2);
+      --mantine-color-lime-light-color: var(--mantine-color-lime-2);
+      --mantine-color-lime-outline: var(--mantine-color-lime-3);
+      --mantine-color-lime-outline-hover: rgba(233, 255, 173, 0.05);
+      --mantine-color-yellow-filled: var(--mantine-color-yellow-7);
+      --mantine-color-yellow-filled-hover: var(--mantine-color-yellow-8);
+      --mantine-color-yellow-light: rgba(252, 196, 25, 0.15);
+      --mantine-color-yellow-light-hover: rgba(252, 196, 25, 0.2);
+      --mantine-color-yellow-light-color: var(--mantine-color-yellow-2);
+      --mantine-color-yellow-outline: var(--mantine-color-yellow-3);
+      --mantine-color-yellow-outline-hover: rgba(255, 224, 102, 0.05);
+      --mantine-color-orange-filled: var(--mantine-color-orange-7);
+      --mantine-color-orange-filled-hover: var(--mantine-color-orange-8);
+      --mantine-color-orange-light: rgba(255, 146, 43, 0.15);
+      --mantine-color-orange-light-hover: rgba(255, 146, 43, 0.2);
+      --mantine-color-orange-light-color: var(--mantine-color-orange-2);
+      --mantine-color-orange-outline: var(--mantine-color-orange-3);
+      --mantine-color-orange-outline-hover: rgba(255, 192, 120, 0.05);
+      --mantine-color-cream-text: var(--mantine-color-cream-4);
+      --mantine-color-cream-filled: var(--mantine-color-cream-7);
+      --mantine-color-cream-filled-hover: var(--mantine-color-cream-8);
+      --mantine-color-cream-light: rgba(216, 207, 191, 0.15);
+      --mantine-color-cream-light-hover: rgba(216, 207, 191, 0.2);
+      --mantine-color-cream-light-color: var(--mantine-color-cream-2);
+      --mantine-color-cream-outline: var(--mantine-color-cream-3);
+      --mantine-color-cream-outline-hover: rgba(238, 235, 221, 0.05);
+    }
+
+    :root[data-mantine-color-scheme="light"] {
+      --mantine-color-text: #141414;
+      --mantine-color-anchor: var(--mantine-color-lime-7);
+      --mantine-color-dark-filled: var(--mantine-color-dark-7);
+      --mantine-color-dark-filled-hover: var(--mantine-color-dark-8);
+      --mantine-color-dark-light: rgba(36, 36, 36, 0.1);
+      --mantine-color-dark-light-hover: rgba(36, 36, 36, 0.12);
+      --mantine-color-dark-light-color: var(--mantine-color-dark-7);
+      --mantine-color-dark-outline: var(--mantine-color-dark-7);
+      --mantine-color-dark-outline-hover: rgba(36, 36, 36, 0.05);
+      --mantine-color-gray-filled: var(--mantine-color-gray-7);
+      --mantine-color-gray-filled-hover: var(--mantine-color-gray-8);
+      --mantine-color-gray-light: rgba(118, 118, 118, 0.1);
+      --mantine-color-gray-light-hover: rgba(118, 118, 118, 0.12);
+      --mantine-color-gray-light-color: var(--mantine-color-gray-7);
+      --mantine-color-gray-outline: var(--mantine-color-gray-7);
+      --mantine-color-gray-outline-hover: rgba(118, 118, 118, 0.05);
+      --mantine-color-red-filled: var(--mantine-color-red-7);
+      --mantine-color-red-filled-hover: var(--mantine-color-red-8);
+      --mantine-color-red-light: rgba(255, 192, 203, 0.1);
+      --mantine-color-red-light-hover: rgba(255, 192, 203, 0.12);
+      --mantine-color-red-light-color: var(--mantine-color-red-7);
+      --mantine-color-red-outline: var(--mantine-color-red-7);
+      --mantine-color-red-outline-hover: rgba(255, 192, 203, 0.05);
+      --mantine-color-pink-filled: var(--mantine-color-pink-7);
+      --mantine-color-pink-filled-hover: var(--mantine-color-pink-8);
+      --mantine-color-pink-light: rgba(214, 51, 108, 0.1);
+      --mantine-color-pink-light-hover: rgba(214, 51, 108, 0.12);
+      --mantine-color-pink-light-color: var(--mantine-color-pink-7);
+      --mantine-color-pink-outline: var(--mantine-color-pink-7);
+      --mantine-color-pink-outline-hover: rgba(214, 51, 108, 0.05);
+      --mantine-color-grape-filled: var(--mantine-color-grape-7);
+      --mantine-color-grape-filled-hover: var(--mantine-color-grape-8);
+      --mantine-color-grape-light: rgba(174, 62, 201, 0.1);
+      --mantine-color-grape-light-hover: rgba(174, 62, 201, 0.12);
+      --mantine-color-grape-light-color: var(--mantine-color-grape-7);
+      --mantine-color-grape-outline: var(--mantine-color-grape-7);
+      --mantine-color-grape-outline-hover: rgba(174, 62, 201, 0.05);
+      --mantine-color-violet-filled: var(--mantine-color-violet-7);
+      --mantine-color-violet-filled-hover: var(--mantine-color-violet-8);
+      --mantine-color-violet-light: rgba(112, 72, 232, 0.1);
+      --mantine-color-violet-light-hover: rgba(112, 72, 232, 0.12);
+      --mantine-color-violet-light-color: var(--mantine-color-violet-7);
+      --mantine-color-violet-outline: var(--mantine-color-violet-7);
+      --mantine-color-violet-outline-hover: rgba(112, 72, 232, 0.05);
+      --mantine-color-indigo-filled: var(--mantine-color-indigo-7);
+      --mantine-color-indigo-filled-hover: var(--mantine-color-indigo-8);
+      --mantine-color-indigo-light: rgba(66, 99, 235, 0.1);
+      --mantine-color-indigo-light-hover: rgba(66, 99, 235, 0.12);
+      --mantine-color-indigo-light-color: var(--mantine-color-indigo-7);
+      --mantine-color-indigo-outline: var(--mantine-color-indigo-7);
+      --mantine-color-indigo-outline-hover: rgba(66, 99, 235, 0.05);
+      --mantine-color-blue-filled: var(--mantine-color-blue-7);
+      --mantine-color-blue-filled-hover: var(--mantine-color-blue-8);
+      --mantine-color-blue-light: rgba(28, 126, 214, 0.1);
+      --mantine-color-blue-light-hover: rgba(28, 126, 214, 0.12);
+      --mantine-color-blue-light-color: var(--mantine-color-blue-7);
+      --mantine-color-blue-outline: var(--mantine-color-blue-7);
+      --mantine-color-blue-outline-hover: rgba(28, 126, 214, 0.05);
+      --mantine-color-cyan-filled: var(--mantine-color-cyan-7);
+      --mantine-color-cyan-filled-hover: var(--mantine-color-cyan-8);
+      --mantine-color-cyan-light: rgba(16, 152, 173, 0.1);
+      --mantine-color-cyan-light-hover: rgba(16, 152, 173, 0.12);
+      --mantine-color-cyan-light-color: var(--mantine-color-cyan-7);
+      --mantine-color-cyan-outline: var(--mantine-color-cyan-7);
+      --mantine-color-cyan-outline-hover: rgba(16, 152, 173, 0.05);
+      --mantine-color-teal-filled: var(--mantine-color-teal-7);
+      --mantine-color-teal-filled-hover: var(--mantine-color-teal-8);
+      --mantine-color-teal-light: rgba(0, 226, 118, 0.1);
+      --mantine-color-teal-light-hover: rgba(0, 226, 118, 0.12);
+      --mantine-color-teal-light-color: var(--mantine-color-teal-7);
+      --mantine-color-teal-outline: var(--mantine-color-teal-7);
+      --mantine-color-teal-outline-hover: rgba(0, 226, 118, 0.05);
+      --mantine-color-green-filled: var(--mantine-color-green-7);
+      --mantine-color-green-filled-hover: var(--mantine-color-green-8);
+      --mantine-color-green-light: rgba(55, 178, 77, 0.1);
+      --mantine-color-green-light-hover: rgba(55, 178, 77, 0.12);
+      --mantine-color-green-light-color: var(--mantine-color-green-7);
+      --mantine-color-green-outline: var(--mantine-color-green-7);
+      --mantine-color-green-outline-hover: rgba(55, 178, 77, 0.05);
+      --mantine-color-lime-filled: var(--mantine-color-lime-7);
+      --mantine-color-lime-filled-hover: var(--mantine-color-lime-8);
+      --mantine-color-lime-light: rgba(166, 226, 0, 0.1);
+      --mantine-color-lime-light-hover: rgba(166, 226, 0, 0.12);
+      --mantine-color-lime-light-color: var(--mantine-color-lime-7);
+      --mantine-color-lime-outline: var(--mantine-color-lime-7);
+      --mantine-color-lime-outline-hover: rgba(166, 226, 0, 0.05);
+      --mantine-color-yellow-filled: var(--mantine-color-yellow-7);
+      --mantine-color-yellow-filled-hover: var(--mantine-color-yellow-8);
+      --mantine-color-yellow-light: rgba(245, 159, 0, 0.1);
+      --mantine-color-yellow-light-hover: rgba(245, 159, 0, 0.12);
+      --mantine-color-yellow-light-color: var(--mantine-color-yellow-7);
+      --mantine-color-yellow-outline: var(--mantine-color-yellow-7);
+      --mantine-color-yellow-outline-hover: rgba(245, 159, 0, 0.05);
+      --mantine-color-orange-filled: var(--mantine-color-orange-7);
+      --mantine-color-orange-filled-hover: var(--mantine-color-orange-8);
+      --mantine-color-orange-light: rgba(247, 103, 7, 0.1);
+      --mantine-color-orange-light-hover: rgba(247, 103, 7, 0.12);
+      --mantine-color-orange-light-color: var(--mantine-color-orange-7);
+      --mantine-color-orange-outline: var(--mantine-color-orange-7);
+      --mantine-color-orange-outline-hover: rgba(247, 103, 7, 0.05);
+      --mantine-color-cream-text: var(--mantine-color-cream-filled);
+      --mantine-color-cream-filled: var(--mantine-color-cream-7);
+      --mantine-color-cream-filled-hover: var(--mantine-color-cream-8);
+      --mantine-color-cream-light: rgba(255, 192, 203, 0.1);
+      --mantine-color-cream-light-hover: rgba(255, 192, 203, 0.12);
+      --mantine-color-cream-light-color: var(--mantine-color-cream-7);
+      --mantine-color-cream-outline: var(--mantine-color-cream-7);
+      --mantine-color-cream-outline-hover: rgba(255, 192, 203, 0.05);
+    }
+  </style>
+  <style data-mantine-styles="classes" nonce="">
+    @media (max-width: 35.99375em) {
+      .mantine-visible-from-xs {
+        display: none !important;
+      }
+    }
+
+    @media (min-width: 36em) {
+      .mantine-hidden-from-xs {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 47.99375em) {
+      .mantine-visible-from-sm {
+        display: none !important;
+      }
+    }
+
+    @media (min-width: 48em) {
+      .mantine-hidden-from-sm {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 61.99375em) {
+      .mantine-visible-from-md {
+        display: none !important;
+      }
+    }
+
+    @media (min-width: 62em) {
+      .mantine-hidden-from-md {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 74.99375em) {
+      .mantine-visible-from-lg {
+        display: none !important;
+      }
+    }
+
+    @media (min-width: 75em) {
+      .mantine-hidden-from-lg {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 87.99375em) {
+      .mantine-visible-from-xl {
+        display: none !important;
+      }
+    }
+
+    @media (min-width: 88em) {
+      .mantine-hidden-from-xl {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 28.74375em) {
+      .mantine-visible-from-xxs {
+        display: none !important;
+      }
+    }
+
+    @media (min-width: 28.75em) {
+      .mantine-hidden-from-xxs {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 23.74375em) {
+      .mantine-visible-from-x3s {
+        display: none !important;
+      }
+    }
+
+    @media (min-width: 23.75em) {
+      .mantine-hidden-from-x3s {
+        display: none !important;
+      }
+    }
+  </style>
+  <style data-mantine-styles="inline" nonce="">
+    :root {
+      --app-shell-navbar-width: 0rem;
+      --app-shell-navbar-offset: 0rem;
+      --app-shell-header-height: calc(2.625rem * var(--mantine-scale));
+      --app-shell-header-offset: calc(2.625rem * var(--mantine-scale));
+      --app-shell-padding: 0px;
+    }
+
+    @media(min-width: 48em) {
+      :root {
+        --app-shell-navbar-width: calc(13.75rem * var(--mantine-scale));
+        --app-shell-navbar-offset: calc(13.75rem * var(--mantine-scale));
+        --app-shell-header-height: 0rem;
+        --app-shell-header-offset: 0rem;
+      }
+    }
+
+    @media(max-width: 47.99375em) {
+      :root {
+        --app-shell-navbar-width: 100%;
+        --app-shell-navbar-offset: 0px;
+        --app-shell-navbar-transform: translateX(calc(var(--app-shell-navbar-width) * -1));
+        --app-shell-navbar-transform-rtl: translateX(var(--app-shell-navbar-width));
+      }
+    }
+  </style>
+  <div style="--app-shell-transition-duration: 200ms; --app-shell-transition-timing-function: ease;" class="m_89ab340 mantine-AppShell-root">
+    <nav style="--app-shell-navbar-z-index: calc(600 + 1);" class="m_45252eee mantine-AppShell-navbar _navbar_ocydd_20" data-with-border="true">
+      <div class="m_6dcfc7c7 mantine-AppShell-section" data-grow="true">
+        <div style="--stack-gap: 0rem; --stack-align: stretch; --stack-justify: flex-start;" class="m_6d731127 mantine-Stack-root">
+          <div style="--stack-gap: 0rem; --stack-align: start; --stack-justify: flex-start; margin-top: var(--mantine-spacing-lg);" class="m_6d731127 mantine-Stack-root">
+            <div>
+              <a style="--button-height: var(--button-height-sm); --button-padding-x: var(--button-padding-x-sm); --button-fz: var(--mantine-font-size-sm); width: 100%;" class="focusClass mantine-active _root_wau0q_2 m_77c9d27d mantine-Button-root m_87cf2631 mantine-UnstyledButton-root" data-variant="navLink" data-size="sm" data-with-left-section="true" href="/home" data-discover="true">
+                <span class="_inner_wau0q_154 m_80f1301b mantine-Button-inner">
+                  <span class="m_a74036a mantine-Button-section" data-position="left">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M23.2208 12C23.2208 18.1971 18.1971 23.2208 12.0001 23.2208C5.80301 23.2208 0.779297 18.1971 0.779297 12C0.779297 5.80295 5.80301 0.779236 12.0001 0.779236C18.1971 0.779236 23.2208 5.80295 23.2208 12Z" fill="currentColor"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1.55845C6.23329 1.55845 1.55845 6.23329 1.55845 12C1.55845 17.7667 6.23329 22.4416 12 22.4416C17.7667 22.4416 22.4416 17.7667 22.4416 12C22.4416 6.23329 17.7667 1.55845 12 1.55845ZM0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12Z" fill="#141414"></path>
+                      <path d="M16.4938 12.0001C16.4938 18.1971 14.4822 23.2208 12.0008 23.2208C9.5194 23.2208 7.50781 18.1971 7.50781 12.0001C7.50781 5.80301 9.5194 0.779297 12.0008 0.779297C14.4822 0.779297 16.4938 5.80301 16.4938 12.0001Z" fill="currentColor"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5471 4.35543C8.7793 6.27292 8.28696 8.97537 8.28696 12.0001C8.28696 15.0248 8.7793 17.7272 9.5471 19.6447C9.93186 20.6056 10.3705 21.3309 10.8177 21.8033C11.2634 22.2741 11.6634 22.4416 12.0007 22.4416C12.3381 22.4416 12.7381 22.2741 13.1838 21.8033C13.631 21.3309 14.0696 20.6056 14.4544 19.6447C15.2222 17.7272 15.7145 15.0248 15.7145 12.0001C15.7145 8.97537 15.2222 6.27292 14.4544 4.35543C14.0696 3.39453 13.631 2.66918 13.1838 2.19677C12.7381 1.72605 12.3381 1.55851 12.0007 1.55851C11.6634 1.55851 11.2634 1.72605 10.8177 2.19677C10.3705 2.66918 9.93186 3.39453 9.5471 4.35543ZM9.686 1.12536C10.3154 0.460486 11.0974 6.10352e-05 12.0007 6.10352e-05C12.9041 6.10352e-05 13.6861 0.460486 14.3155 1.12536C14.9433 1.78856 15.4729 2.70645 15.9012 3.77612C16.7595 5.91974 17.273 8.82769 17.273 12.0001C17.273 15.1724 16.7595 18.0804 15.9012 20.224C15.4729 21.2937 14.9433 22.2116 14.3155 22.8748C13.6861 23.5396 12.9041 24.0001 12.0007 24.0001C11.0974 24.0001 10.3154 23.5396 9.686 22.8748C9.05815 22.2116 8.52864 21.2937 8.10032 20.224C7.24198 18.0804 6.72852 15.1724 6.72852 12.0001C6.72852 8.82769 7.24198 5.91974 8.10032 3.77612C8.52864 2.70645 9.05815 1.78856 9.686 1.12536Z" fill="#141414"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M23.3781 12.8031H0.785156V11.2447H23.3781V12.8031Z" fill="#141414"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M21.6997 7.18863H2.46094V5.63019H21.6997V7.18863Z" fill="#141414"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M21.6997 18.4178H2.46094V16.8594H21.6997V18.4178Z" fill="#141414"></path>
+                    </svg>
+                  </span>
+                  <span class="m_811560b9 mantine-Button-label">Home</span>
+                </span>
+              </a>
+            </div>
+            <div>
+              <a style="--button-height: var(--button-height-sm); --button-padding-x: var(--button-padding-x-sm); --button-fz: var(--mantine-font-size-sm); width: 100%;" class="focusClass mantine-active _root_wau0q_2 m_77c9d27d mantine-Button-root m_87cf2631 mantine-UnstyledButton-root" data-variant="navLink" data-size="sm" data-with-left-section="true" href="/playlists" data-discover="true">
+                <span class="_inner_wau0q_154 m_80f1301b mantine-Button-inner">
+                  <span class="m_a74036a mantine-Button-section" data-position="left">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none">
+                      <circle cx="7" cy="9" r="6.25" stroke="currentcolor" stroke-width="1.5"></circle>
+                      <mask id="a" fill="currentcolor">
+                        <path fill-rule="evenodd" d="M11.344 14.49A6.981 6.981 0 0 1 9 15.71 7 7 0 1 0 9 2.29a6.98 6.98 0 0 1 2.344 1.22 5.5 5.5 0 0 1 0 10.98Z" clip-rule="evenodd"></path>
+                      </mask>
+                      <path fill="#000" fill-rule="evenodd" d="M11.344 14.49A6.981 6.981 0 0 1 9 15.71 7 7 0 1 0 9 2.29a6.98 6.98 0 0 1 2.344 1.22 5.5 5.5 0 0 1 0 10.98Z" clip-rule="evenodd"></path>
+                      <path fill="currentcolor" d="m11.344 14.49-.092-1.498-.47.03-.37.292.932 1.175ZM9 15.71l-.428-1.438-4.83 1.438 4.83 1.438L9 15.71ZM9 2.29 8.572.852 3.742 2.29l4.83 1.438L9 2.29Zm2.344 1.22-.932 1.176.37.293.47.029.092-1.497Zm-.932 9.804a5.48 5.48 0 0 1-1.84.958l.856 2.876a8.481 8.481 0 0 0 2.848-1.483l-1.864-2.351Zm-1.84 3.834A8.5 8.5 0 0 0 11 17.5v-3c-.549 0-1.076-.08-1.572-.228l-.856 2.876ZM11 17.5A8.5 8.5 0 0 0 19.5 9h-3a5.5 5.5 0 0 1-5.5 5.5v3ZM19.5 9A8.5 8.5 0 0 0 11 .5v3A5.5 5.5 0 0 1 16.5 9h3ZM11 .5c-.841 0-1.657.123-2.428.352l.856 2.876A5.501 5.501 0 0 1 11 3.5v-3ZM8.572 3.728a5.48 5.48 0 0 1 1.84.958l1.864-2.351A8.481 8.481 0 0 0 9.428.852l-.856 2.876ZM18 9a7 7 0 0 0-6.564-6.987l-.184 2.995A4 4 0 0 1 15 9h3Zm-6.564 6.987A7 7 0 0 0 18 9h-3a4 4 0 0 1-3.748 3.992l.184 2.995Z" mask="url(#a)"></path>
+                      <circle cx="7" cy="9" r="2.25" stroke="currentcolor"></circle>
+                    </svg>
+                  </span>
+                  <span class="m_811560b9 mantine-Button-label">Playlists</span>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div style="padding-inline: var(--mantine-spacing-sm); width: 100%;" class="">
+            <div style="--divider-color: var(--mantine-color-black); --divider-border-style: navbar;" class="_root_1f1ao_2 m_3eebeb36 mantine-Divider-root" data-variant="navbar" data-orientation="horizontal" role="separator"></div>
+          </div>
+          <div style="--stack-gap: 0rem; --stack-align: start; --stack-justify: flex-start;" class="m_6d731127 mantine-Stack-root">
+            <div>
+              <a style="--button-height: var(--button-height-sm); --button-padding-x: var(--button-padding-x-sm); --button-fz: var(--mantine-font-size-sm); width: 100%;" class="focusClass mantine-active _root_wau0q_2 m_77c9d27d mantine-Button-root m_87cf2631 mantine-UnstyledButton-root" data-variant="navLink" data-size="sm" data-with-left-section="true" href="/guide" data-discover="true">
+                <span class="_inner_wau0q_154 m_80f1301b mantine-Button-inner">
+                  <span class="m_a74036a mantine-Button-section" data-position="left">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none">
+                      <path fill="currentcolor" d="M8.344 15.886a.75.75 0 1 0 1.312.728l-1.312-.728Zm.8-11.6-.603-.447.603.446ZM15.5 3.25V13H17V3.25h-1.5Zm-.25 10h-1.5v1.5h1.5v-1.5Zm-1.5 0c-1.924 0-3.268.623-4.137 1.275-.431.323-.74.649-.944.9a4.094 4.094 0 0 0-.32.453l-.003.004v.002l-.001.001.655.365c.656.364.655.365.655.365v.002l-.002.002v.001l.003-.006.029-.045c.028-.043.077-.111.146-.197.14-.17.362-.408.681-.647.63-.473 1.662-.975 3.238-.975v-1.5Zm-5.5-8.496V15.999L9 16h.75V4.753h-1.5Zm5.5-3.254c-3.137 0-4.698 1.647-5.21 2.34l1.207.891C10.067 4.298 11.224 3 13.75 3V1.5Zm0 1.5h1.5V1.5h-1.5V3Zm1.75 10a.25.25 0 0 1-.25.25v1.5A1.75 1.75 0 0 0 17 13h-1.5ZM9.75 4.754c0-.023.003-.033.003-.034l-.001.003a.054.054 0 0 1-.005.008L8.54 3.839c-.215.29-.291.618-.291.915h1.5ZM17 3.25a1.75 1.75 0 0 0-1.75-1.75V3a.25.25 0 0 1 .25.25H17Z"></path>
+                      <path fill="currentcolor" d="M9.656 15.886a.75.75 0 1 1-1.312.728l1.312-.728Zm-.8-11.6.603-.447-.603.446ZM2.5 3.25V13H1V3.25h1.5Zm.25 10h1.5v1.5h-1.5v-1.5Zm1.5 0c1.924 0 3.268.623 4.137 1.275.431.323.74.649.944.9a4.094 4.094 0 0 1 .32.453l.003.004v.002l.001.001L9 16.25c-.656.364-.655.365-.655.365v.002l.002.002v.001l-.003-.006a2.605 2.605 0 0 0-.176-.242 3.894 3.894 0 0 0-.68-.647c-.63-.473-1.662-.975-3.238-.975v-1.5Zm5.5-8.496V15.999L9 16h-.75V4.753h1.5ZM4.25 1.5c3.137 0 4.698 1.647 5.21 2.34l-1.207.891C7.933 4.298 6.776 3 4.25 3V1.5Zm0 1.5h-1.5V1.5h1.5V3ZM2.5 13c0 .138.112.25.25.25v1.5A1.75 1.75 0 0 1 1 13h1.5Zm5.75-8.246a.131.131 0 0 0-.003-.034l.001.003a.054.054 0 0 0 .005.008l1.206-.892c.215.29.291.618.291.915h-1.5ZM1 3.25c0-.966.784-1.75 1.75-1.75V3a.25.25 0 0 0-.25.25H1Z"></path>
+                    </svg>
+                  </span>
+                  <span class="m_811560b9 mantine-Button-label">PartyRock Guide</span>
+                </span>
+              </a>
+            </div>
+            <div>
+              <a style="--button-height: var(--button-height-sm); --button-padding-x: var(--button-padding-x-sm); --button-fz: var(--mantine-font-size-sm); width: 100%;" class="focusClass mantine-active _root_wau0q_2 m_77c9d27d mantine-Button-root m_87cf2631 mantine-UnstyledButton-root" data-variant="navLink" data-size="sm" data-with-left-section="true" href="/new" data-discover="true">
+                <span class="_inner_wau0q_154 m_80f1301b mantine-Button-inner">
+                  <span class="m_a74036a mantine-Button-section" data-position="left">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none">
+                      <path stroke="currentcolor" stroke-width="1.5" d="M11.531 1.767a.5.5 0 0 1 .938 0l.802 2.167a.5.5 0 0 0 .295.295l2.167.802a.5.5 0 0 1 0 .938l-2.167.802a.5.5 0 0 0-.295.295l-.802 2.167a.5.5 0 0 1-.938 0l-.802-2.167a.5.5 0 0 0-.295-.295l-2.167-.802a.5.5 0 0 1 0-.938l2.167-.802a.5.5 0 0 0 .295-.295l.802-2.167ZM5.031 8.767a.5.5 0 0 1 .938 0l.802 2.167a.5.5 0 0 0 .295.295l2.167.802a.5.5 0 0 1 0 .938l-2.167.802a.5.5 0 0 0-.295.295l-.802 2.167a.5.5 0 0 1-.938 0l-.802-2.167a.5.5 0 0 0-.295-.295l-2.167-.802a.5.5 0 0 1 0-.938l2.167-.802a.5.5 0 0 0 .295-.295l.802-2.167Z"></path>
+                    </svg>
+                  </span>
+                  <span class="m_811560b9 mantine-Button-label">What's new</span>
+                </span>
+              </a>
+            </div>
+            <div>
+              <a style="--button-height: var(--button-height-sm); --button-padding-x: var(--button-padding-x-sm); --button-fz: var(--mantine-font-size-sm); width: 100%;" class="focusClass mantine-active _root_wau0q_2 m_77c9d27d mantine-Button-root m_87cf2631 mantine-UnstyledButton-root" data-variant="navLink" data-size="sm" data-with-left-section="true" href="/roadmap" data-discover="true">
+                <span class="_inner_wau0q_154 m_80f1301b mantine-Button-inner">
+                  <span class="m_a74036a mantine-Button-section" data-position="left">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none">
+                      <path stroke="currentcolor" stroke-width="1.5" d="M5.833 11.5H2.25a.5.5 0 0 1-.5-.5V7.5a.5.5 0 0 1 .5-.5h3.583a.5.5 0 0 0 .3-.1L9.2 4.6a.5.5 0 0 1 .8.4v8.5a.5.5 0 0 1-.8.4l-3.067-2.3a.5.5 0 0 0-.3-.1Z"></path>
+                      <path stroke="currentcolor" stroke-linecap="round" stroke-width="1.5" d="m16.25 2.25-2.256 1.846a.5.5 0 0 0 .017.787l2.007 1.506a.5.5 0 0 1 .038.768l-2.154 1.974a.5.5 0 0 0 0 .738l2.154 1.974a.5.5 0 0 1-.038.768l-2.008 1.506a.5.5 0 0 0-.016.787l2.256 1.846"></path>
+                    </svg>
+                  </span>
+                  <span class="m_811560b9 mantine-Button-label">Roadmap</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="m_6dcfc7c7 mantine-AppShell-section">
+        <div class="_primaryButtonContainer_ocydd_27">
+          <button style="--button-height: var(--button-height-lg); --button-padding-x: var(--button-padding-x-lg); --button-fz: var(--mantine-font-size-lg); width: 100%;" class="focusClass mantine-active _root_wau0q_2 m_77c9d27d mantine-Button-root m_87cf2631 mantine-UnstyledButton-root" data-variant="inverted" data-size="lg" data-with-left-section="true" type="button">
+            <span class="_inner_wau0q_154 m_80f1301b mantine-Button-inner">
+              <span class="m_a74036a mantine-Button-section" data-position="left">
+                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_94_8418)">
+                    <line x1="7.95609" y1="7.73141" x2="10.1004" y2="9.87569" stroke="currentColor"></line>
+                    <path d="M5.82617 3.50977H8.6748" stroke="currentColor" stroke-width="0.75" stroke-linecap="round"></path>
+                    <path d="M7.25 1.97461L7.25 5.04492" stroke="currentColor" stroke-width="0.75" stroke-linecap="round"></path>
+                    <path d="M12.6094 3.50977H15.458" stroke="currentColor" stroke-width="0.75" stroke-linecap="round"></path>
+                    <path d="M14.0332 1.97461L14.0332 5.04492" stroke="currentColor" stroke-width="0.75" stroke-linecap="round"></path>
+                    <path d="M12.6094 10.6924H15.458" stroke="currentColor" stroke-width="0.75" stroke-linecap="round"></path>
+                    <path d="M14.0332 9.15723L14.0332 12.2275" stroke="currentColor" stroke-width="0.75" stroke-linecap="round"></path>
+                    <rect x="1.50398" y="13.9463" width="11.9222" height="3.17578" rx="0.5" transform="rotate(-45 1.50398 13.9463)" stroke="currentColor"></rect>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_94_8418">
+                      <rect width="16" height="16" fill="white" transform="translate(0.97168 0.683594)"></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+              <span class="m_811560b9 mantine-Button-label">Sign in</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <header style="--app-shell-header-z-index: 100;" class="m_3b16f56b mantine-AppShell-header right-scroll-bar-position mantine-hidden-from-sm" data-with-border="true">
+      <header data-scrolled="false" data-opened="false" class="_headerContainer_1d25i_1" style="--header-height: calc(2.625rem * var(--mantine-scale));">
+        <div class="_header_1d25i_1">
+          <div style="--stack-gap: 0rem; --stack-align: apart; --stack-justify: center;" class="_inner_1d25i_17 m_6d731127 mantine-Stack-root">
+            <div style="--group-gap: var(--mantine-spacing-xs); --group-align: center; --group-justify: apart; --group-wrap: nowrap;" class="m_4081bf90 mantine-Group-root">
+              <a class="focusClass _root_vbrev_2 _root_d73bm_2 m_849cf0da _logo_1d25i_24 m_b6d8b162 mantine-Text-root mantine-Anchor-root" data-variant="light" data-underline="hover" tabindex="0" href="/" data-discover="true">PartyRock</a>
+              <button style="--ai-bg: var(--mantine-color-default); --ai-hover: var(--mantine-color-default-hover); --ai-color: var(--mantine-color-default-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid var(--mantine-color-default-border);" class="focusClass mantine-active _root_whn7r_2 _burgerButton_1d25i_80 m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root" data-variant="default" type="button" aria-label="open navigation bar">
+                <span class="m_8d3afb97 mantine-ActionIcon-icon">
+                  <div class="_burgerIcon_1d25i_34">
+                    <span class="_burgerIconPart_1d25i_39"></span>
+                    <span class="_burgerIconPart_1d25i_39"></span>
+                    <span class="_burgerIconPart_1d25i_39"></span>
+                  </div>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+    </header>
+    <main class="_main_1yzkk_45 m_8983817 mantine-AppShell-main">
+      <div class="m_8bffd616 mantine-Flex-root __m__-r17">
+        <div style="--sa-corner-width: 0px; --sa-corner-height: 0px; height: calc(100dvh - calc(2.625rem * var(--mantine-scale)));" class="_root_6txj5_2 _scrollContainer_1yzkk_28 m_d57069b5 mantine-ScrollArea-root" id="layout-root">
+          <div style="overflow: scroll;" class="_viewport_6txj5_8 _viewport_1yzkk_36 m_c0783ff9 mantine-ScrollArea-viewport" id="viewport" data-scrollbars="xy">
+            <div style="min-width: 100%; display: table;">
+              <div style="--stack-gap: var(--mantine-spacing-md); --stack-align: stretch; --stack-justify: flex-start;" class="_appContainer_1yzkk_41 m_6d731127 mantine-Stack-root">
+                <div style="min-height: calc(100dvh - calc(2.625rem * var(--mantine-scale)));" class="_defaultContainer_1yzkk_1 _maxWidthContainer_1yzkk_10 m_7485cace mantine-Container-root" data-fluid="true">
+                  <div style="--stack-gap: var(--mantine-spacing-md); --stack-align: stretch; --stack-justify: flex-start;" class="m_6d731127 mantine-Stack-root">
+                    <div style="height: 100%;" class="">
+                      <div style="background: var(--mantine-primary-color-5); align-items: stretch; flex-direction: column; padding-inline: var(--mantine-spacing-xxl); padding-block: var(--mantine-spacing-sm);" class="m_8bffd616 mantine-Flex-root __m__-rek">
+                        <div style="gap: var(--mantine-spacing-xxs); align-items: flex-start; justify-content: space-between; flex-wrap: nowrap;" class="m_8bffd616 mantine-Flex-root __m__-rem">
+                          <p style="--text-fz: var(--mantine-font-size-xxl); --text-lh: var(--mantine-line-height-xxl); --text-line-clamp: 2; align-self: center; font-size: calc(1.5rem * var(--mantine-scale)); font-weight: 300; line-height: 28px;" class="focusClass _root_vbrev_2 m_b6d8b162 mantine-Text-root" data-size="xxl" data-line-clamp="true" data-testid="app-title">AgriAI Advisor</p>
+                          <button style="--button-height: var(--button-height-sm); --button-padding-x: var(--button-padding-x-sm); --button-fz: var(--mantine-font-size-sm); padding: 0rem; width: calc(1.5625rem * var(--mantine-scale)); height: calc(1.5625rem * var(--mantine-scale));" class="focusClass mantine-active _root_wau0q_2 m_77c9d27d mantine-Button-root m_87cf2631 mantine-UnstyledButton-root" data-variant="info-mobile" data-size="sm" type="button" data-testid="app-info" aria-label="Show app information">
+                            <span class="_inner_wau0q_154 m_80f1301b mantine-Button-inner">
+                              <span class="m_811560b9 mantine-Button-label">i</span>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                      <div style="--stack-gap: var(--mantine-spacing-md); --stack-align: stretch; --stack-justify: flex-start; padding: var(--mantine-spacing-lg);" class="m_6d731127 mantine-Stack-root">
+                        <div style="--card-padding: 0rem;" class="_root_88bld_2 _root_13anm_2 _preventSelect_xt2ek_8 m_e615b15f mantine-Card-root m_1b7284a3 mantine-Paper-root" data-variant="static-mobile" data-testid="widget-card" aria-busy="false">
+                          <div style="--group-gap: var(--mantine-spacing-xxs); --group-align: center; --group-justify: space-between; --group-wrap: nowrap;" class="m_4081bf90 mantine-Group-root">
+                            <div style="gap: var(--mantine-spacing-xxs); align-items: center; flex-wrap: nowrap;" class="_mobileWidgetTitle_xt2ek_1 m_8bffd616 mantine-Flex-root __m__-rcf">
+                              <p class="focusClass _root_vbrev_2 m_b6d8b162 mantine-Text-root" data-testid="card-title">Welcome</p>
+                            </div>
+                            <div style="width: calc(1.25rem * var(--mantine-scale)); height: calc(1.25rem * var(--mantine-scale));" class=""></div>
+                          </div>
+                          <p style="--text-line-clamp: 2; display: -webkit-box; font-size: var(--mantine-font-size-sm);" class="focusClass _root_vbrev_2 m_b6d8b162 mantine-Text-root" data-line-clamp="true">Welcome to the AI Agricultural Advisor, designed specifically for small and marginal farmers. This system will provide personalized farming advice based on your specific situation, including crop management, pest control, and sustainable farming practices. Please fill in the details below to receive customized recommendations.</p>
+                        </div>
+                        <div style="--card-padding: 0rem;" class="_root_88bld_2 _root_13anm_2 _preventSelect_xt2ek_8 m_e615b15f mantine-Card-root m_1b7284a3 mantine-Paper-root" data-variant="input-mobile" data-testid="widget-card" aria-busy="false">
+                          <div style="--group-gap: var(--mantine-spacing-xxs); --group-align: center; --group-justify: space-between; --group-wrap: nowrap;" class="m_4081bf90 mantine-Group-root">
+                            <div style="gap: var(--mantine-spacing-xxs); align-items: center; flex-wrap: nowrap;" class="_mobileWidgetTitle_xt2ek_1 m_8bffd616 mantine-Flex-root __m__-rcn">
+                              <svg width="14" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.05993 11.5168L10.8824 7.69437C11.5359 7.04086 11.5359 5.98044 10.8824 5.33926L7.05993 1.51682" stroke="currentColor" stroke-width="1.25" stroke-linecap="square" stroke-linejoin="round"></path>
+                                <path d="M11.073 6.51682H1.07297" stroke="currentColor" stroke-width="1.25" stroke-linecap="square" stroke-linejoin="round"></path>
+                              </svg>
+                              <p class="focusClass _root_vbrev_2 m_b6d8b162 mantine-Text-root" data-testid="card-title">Crop Type</p>
+                            </div>
+                            <div style="width: calc(1.25rem * var(--mantine-scale)); height: calc(1.25rem * var(--mantine-scale));" class=""></div>
+                          </div>
+                          <p style="color: var(--mantine-color-gray-8); font-size: var(--mantine-font-size-sm);" class="focusClass _root_vbrev_2 m_b6d8b162 mantine-Text-root" data-truncate="end">What crop are you growing? (e.g., rice, wheat, cotton, vegetables)</p>
+                        </div>
+                        <div style="--card-padding: 0rem;" class="_root_88bld_2 _root_13anm_2 _preventSelect_xt2ek_8 m_e615b15f mantine-Card-root m_1b7284a3 mantine-Paper-root" data-variant="input-mobile" data-testid="widget-card" aria-busy="false">
+                          <div style="--group-gap: var(--mantine-spacing-xxs); --group-align: center; --group-justify: space-between; --group-wrap: nowrap;" class="m_4081bf90 mantine-Group-root">
+                            <div style="gap: var(--mantine-spacing-xxs); align-items: center; flex-wrap: nowrap;" class="_mobileWidgetTitle_xt2ek_1 m_8bffd616 mantine-Flex-root __m__-rcv">
+                              <svg width="14" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.05993 11.5168L10.8824 7.69437C11.5359 7.04086 11.5359 5.98044 10.8824 5.33926L7.05993 1.51682" stroke="currentColor" stroke-width="1.25" stroke-linecap="square" stroke-linejoin="round"></path>
+                                <path d="M11.073 6.51682H1.07297" stroke="currentColor" stroke-width="1.25" stroke-linecap="square" stroke-linejoin="round"></path>
+                              </svg>
+                              <p class="focusClass _root_vbrev_2 m_b6d8b162 mantine-Text-root" data-testid="card-title">Land Details</p>
+                            </div>
+                            <div style="width: calc(1.25rem * var(--mantine-scale)); height: calc(1.25rem * var(--mantine-scale));" class=""></div>
+                          </div>
+                          <p style="color: var(--mantine-color-gray-8); font-size: var(--mantine-font-size-sm);" class="focusClass _root_vbrev_2 m_b6d8b162 mantine-Text-root" data-truncate="end">Describe your land size and soil type (e.g., 2 acres, red soil)</p>
+                        </div>
+                        <div style="--card-padding: 0rem;" class="_root_88bld_2 _root_13anm_2 _preventSelect_xt2ek_8 m_e615b15f mantine-Card-root m_1b7284a3 mantine-Paper-root" data-variant="input-mobile" data-testid="widget-card" aria-busy="false">
+                          <div style="--group-gap: var(--mantine-spacing-xxs); --group-align: center; --group-justify: space-between; --group-wrap: nowrap;" class="m_4081bf90 mantine-Group-root">
+                            <div style="gap: var(--mantine-spacing-xxs); align-items: center; flex-wrap: nowrap;" class="_mobileWidgetTitle_xt2ek_1 m_8bffd616 mantine-Flex-root __m__-rd7">
+                              <svg width="14" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.05993 11.5168L10.8824 7.69437C11.5359 7.04086 11.5359 5.98044 10.8824 5.33926L7.05993 1.51682" stroke="currentColor" stroke-width="1.25" stroke-linecap="square" stroke-linejoin="round"></path>
+                                <path d="M11.073 6.51682H1.07297" stroke="currentColor" stroke-width="1.25" stroke-linecap="square" stroke-linejoin="round"></path>
+                              </svg>
+                              <p class="focusClass _root_vbrev_2 m_b6d8b162 mantine-Text-root" data-testid="card-title">Current Issues</p>
+                            </div>
+                            <div style="width: calc(1.25rem * var(--mantine-scale)); height: calc(1.25rem * var(--mantine-scale));" class=""></div>
+                          </div>
+                          <p style="color: var(--mantine-color-gray-8); font-size: var(--mantine-font-size-sm);" class="focusClass _root_vbrev_2 m_b6d8b162 mantine-Text-root" data-truncate="end">Describe any current problems or concerns (e.g., yellow leaves, low yield, pest damage)</p>
+                        </div>
+                        <div style="--card-padding: 0rem;" class="_root_88bld_2 _root_13anm_2 _preventSelect_xt2ek_8 m_e615b15f mantine-Card-root m_1b7284a3 mantine-Paper-root" data-variant="input-mobile" data-testid="widget-card" aria-busy="false">
+                          <div style="--group-gap: var(--mantine-spacing-xxs); --group-align: center; --group-justify: space-between; --group-wrap: nowrap;" class="m_4081bf90 mantine-Group-root">
+                            <div style="gap: var(--mantine-spacing-xxs); align-items: center; flex-wrap: nowrap;" class="_mobileWidgetTitle_xt2ek_1 m_8bffd616 mantine-Flex-root __m__-rdf">
+                              <svg width="14" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <line x1="2" y1="12.2983" x2="4" y2="12.2983" stroke="black"></line>
+                                <line x1="2" y1="8.29834" x2="4" y2="8.29834" stroke="black"></line>
+                                <line x1="2" y1="4.29834" x2="4" y2="4.29834" stroke="black"></line>
+                                <line x1="6" y1="12.2983" x2="14" y2="12.2983" stroke="black"></line>
+                                <line x1="6" y1="8.29834" x2="14" y2="8.29834" stroke="black"></line>
+                                <line x1="6" y1="4.29834" x2="14" y2="4.29834" stroke="black"></line>
+                              </svg>
+                              <p class="focusClass _root_vbrev_2 m_b6d8b162 mantine-Text-root" data-testid="card-title">Weather Condition</p>
+                            </div>
+                            <div style="width: calc(1.25rem * var(--mantine-scale)); height: calc(1.25rem * var(--mantine-scale));" class=""></div>
+                          </div>
+                          <p style="color: var(--mantine-color-gray-8); font-size: var(--mantine-font-size-sm);" class="focusClass _root_vbrev_2 m_b6d8b162 mantine-Text-root" data-truncate="end">Select current weather condition</p>
+                        </div>
+                        <div style="--card-padding: 0rem;" class="_root_88bld_2 _root_13anm_2 _preventSelect_xt2ek_8 m_e615b15f mantine-Card-root m_1b7284a3 mantine-Paper-root" data-variant="output-mobile" data-testid="widget-card" aria-busy="false">
+                          <div style="--group-gap: var(--mantine-spacing-xxs); --group-align: center; --group-justify: space-between; --group-wrap: nowrap;" class="m_4081bf90 mantine-Group-root">
+                            <div style="gap: var(--mantine-spacing-xxs); align-items: center; flex-wrap: nowrap;" class="_mobileWidgetTitle_xt2ek_1 m_8bffd616 mantine-Flex-root __m__-rdn">
+                              <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" width="14">
+                                <path d="M11.5311 1.76725C11.6922 1.33194 12.3078 1.33194 12.4689 1.76725L13.2707 3.93393C13.3213 4.07078 13.4292 4.17869 13.5661 4.22933L15.7327 5.03107C16.1681 5.19215 16.1681 5.80785 15.7327 5.96893L13.5661 6.77067C13.4292 6.82131 13.3213 6.92921 13.2707 7.06607L12.4689 9.23275C12.3078 9.66806 11.6922 9.66806 11.5311 9.23275L10.7293 7.06607C10.6787 6.92922 10.5708 6.82131 10.4339 6.77067L8.26725 5.96893C7.83194 5.80785 7.83194 5.19215 8.26725 5.03107L10.4339 4.22933C10.5708 4.17869 10.6787 4.07079 10.7293 3.93393L11.5311 1.76725Z" stroke="#141414" stroke-width="1.25"></path>
+                                <path d="M5.03107 8.76725C5.19215 8.33194 5.80785 8.33194 5.96893 8.76725L6.77067 10.9339C6.82131 11.0708 6.92921 11.1787 7.06607 11.2293L9.23275 12.0311C9.66806 12.1922 9.66806 12.8078 9.23275 12.9689L7.06607 13.7707C6.92922 13.8213 6.82131 13.9292 6.77067 14.0661L5.96893 16.2327C5.80785 16.6681 5.19215 16.6681 5.03107 16.2327L4.22933 14.0661C4.17869 13.9292 4.07079 13.8213 3.93393 13.7707L1.76725 12.9689C1.33194 12.8078 1.33194 12.1922 1.76725 12.0311L3.93393 11.2293C4.07078 11.1787 4.17869 11.0708 4.22933 10.9339L5.03107 8.76725Z" stroke="#141414" stroke-width="1.25"></path>
+                              </svg>
+                              <p class="focusClass _root_vbrev_2 m_b6d8b162 mantine-Text-root" data-testid="card-title">Farming Advice</p>
+                            </div>
+                            <div style="width: calc(1.25rem * var(--mantine-scale)); height: calc(1.25rem * var(--mantine-scale));" class=""></div>
+                          </div>
+                        </div>
+                        <div style="--card-padding: 0rem;" class="_root_88bld_2 _root_13anm_2 _preventSelect_xt2ek_8 m_e615b15f mantine-Card-root m_1b7284a3 mantine-Paper-root" data-variant="output-mobile" data-testid="widget-card" aria-busy="false">
+                          <div style="--group-gap: var(--mantine-spacing-xxs); --group-align: center; --group-justify: space-between; --group-wrap: nowrap;" class="m_4081bf90 mantine-Group-root">
+                            <div style="gap: var(--mantine-spacing-xxs); align-items: center; flex-wrap: nowrap;" class="_mobileWidgetTitle_xt2ek_1 m_8bffd616 mantine-Flex-root __m__-rdu">
+                              <svg width="14" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.3691 13.3562C1.17384 13.5514 1.17384 13.868 1.3691 14.0633C1.56437 14.2585 1.88095 14.2585 2.07621 14.0633L1.3691 13.3562ZM5.34766 10.0847L5.70121 9.73116C5.50595 9.5359 5.18937 9.5359 4.9941 9.73116L5.34766 10.0847ZM11.2383 7.81909L11.6099 7.48461C11.5182 7.38265 11.3885 7.32287 11.2514 7.31926C11.1143 7.31566 10.9817 7.36854 10.8847 7.46554L11.2383 7.81909ZM2.07621 14.0633L5.70121 10.4383L4.9941 9.73116L1.3691 13.3562L2.07621 14.0633ZM4.9941 10.4383L6.0995 11.5437L6.8066 10.8366L5.70121 9.73116L4.9941 10.4383ZM8.22082 11.5437L11.5918 8.17265L10.8847 7.46554L7.51371 10.8366L8.22082 11.5437ZM10.8666 8.15357L14.9448 12.6848L15.6881 12.0159L11.6099 7.48461L10.8666 8.15357ZM3.53516 1.06909H12.5977V0.0690918H3.53516V1.06909ZM14.8164 3.28784V12.3503H15.8164V3.28784H14.8164ZM12.5977 14.5691H3.53516V15.5691H12.5977V14.5691ZM1.31641 12.3503V3.28784H0.316406V12.3503H1.31641ZM3.53516 14.5691C2.30977 14.5691 1.31641 13.5757 1.31641 12.3503H0.316406C0.316406 14.128 1.75749 15.5691 3.53516 15.5691V14.5691ZM14.8164 12.3503C14.8164 13.5757 13.823 14.5691 12.5977 14.5691V15.5691C14.3753 15.5691 15.8164 14.128 15.8164 12.3503H14.8164ZM12.5977 1.06909C13.823 1.06909 14.8164 2.06246 14.8164 3.28784H15.8164C15.8164 1.51018 14.3753 0.0690918 12.5977 0.0690918V1.06909ZM3.53516 0.0690918C1.75749 0.0690918 0.316406 1.51018 0.316406 3.28784H1.31641C1.31641 2.06246 2.30977 1.06909 3.53516 1.06909V0.0690918ZM5.75391 4.64722C5.75391 5.12184 5.36915 5.50659 4.89453 5.50659V6.50659C5.92144 6.50659 6.75391 5.67412 6.75391 4.64722H5.75391ZM4.89453 5.50659C4.41991 5.50659 4.03516 5.12184 4.03516 4.64722H3.03516C3.03516 5.67412 3.86763 6.50659 4.89453 6.50659V5.50659ZM4.03516 4.64722C4.03516 4.1726 4.41991 3.78784 4.89453 3.78784V2.78784C3.86763 2.78784 3.03516 3.62031 3.03516 4.64722H4.03516ZM4.89453 3.78784C5.36915 3.78784 5.75391 4.1726 5.75391 4.64722H6.75391C6.75391 3.62031 5.92144 2.78784 4.89453 2.78784V3.78784ZM6.0995 11.5437C6.68528 12.1295 7.63503 12.1294 8.22082 11.5437L7.51371 10.8366C7.31845 11.0318 7.00187 11.0318 6.8066 10.8366L6.0995 11.5437Z" fill="currentColor"></path>
+                              </svg>
+                              <p class="focusClass _root_vbrev_2 m_b6d8b162 mantine-Text-root" data-testid="card-title">Visual Analysis</p>
+                            </div>
+                            <div style="width: calc(1.25rem * var(--mantine-scale)); height: calc(1.25rem * var(--mantine-scale));" class=""></div>
+                          </div>
+                        </div>
+                        <div style="--card-padding: 0rem;" class="_root_88bld_2 _root_13anm_2 _preventSelect_xt2ek_8 m_e615b15f mantine-Card-root m_1b7284a3 mantine-Paper-root" data-variant="output-mobile" data-testid="widget-card" aria-busy="false">
+                          <div style="--group-gap: var(--mantine-spacing-xxs); --group-align: center; --group-justify: space-between; --group-wrap: nowrap;" class="m_4081bf90 mantine-Group-root">
+                            <div style="gap: var(--mantine-spacing-xxs); align-items: center; flex-wrap: nowrap;" class="_mobileWidgetTitle_xt2ek_1 m_8bffd616 mantine-Flex-root __m__-re5">
+                              <svg width="14" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.6189 6.63217V2.51511C15.6189 1.50453 14.7997 0.685303 13.7891 0.685303H2.81027C1.7997 0.685303 0.980469 1.50454 0.980469 2.51511V9.67522C0.980469 10.6858 1.7997 11.505 2.81027 11.505H4.2423V15.3237L8.06102 11.505H8.29969M13.0234 13.8519L15.4101 16.2386V13.8519H15.6189C16.6295 13.8519 17.4487 13.0327 17.4487 12.0221V8.91943C17.4487 7.90885 16.6295 7.08962 15.6189 7.08962H10.1295C9.11892 7.08962 8.29969 7.90885 8.29969 8.91943V12.0221C8.29969 13.0327 9.11892 13.8519 10.1295 13.8519H13.0234Z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <line x1="3.48438" y1="3.2522" x2="12.8553" y2="3.2522" stroke="currentColor"></line>
+                                <line x1="3.48438" y1="6.32007" x2="7.60649" y2="6.32007" stroke="currentColor"></line>
+                              </svg>
+                              <p class="focusClass _root_vbrev_2 m_b6d8b162 mantine-Text-root" data-testid="card-title">Agricultural Expert Chat</p>
+                            </div>
+                            <div style="width: calc(1.25rem * var(--mantine-scale)); height: calc(1.25rem * var(--mantine-scale));" class=""></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="_mobileAppMenu_1lbn9_6" data-testid="app-menu" data-expanded="false" data-editing="false">
+                        <div class="_drawer_1lbn9_13"></div>
+                        <div class="_bottomMenu_1lbn9_41">
+                          <div class="_grid_1lbn9_14">
+                            <button style="color: var(--mantine-color-black);" class="_bottomBarButton_w8xmm_1" aria-label="Share">
+                              <div class="_icon_w8xmm_16">
+                                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M10.3568 12.6599L14.1793 8.83744C14.8328 8.18393 14.8328 7.12351 14.1793 6.48232L10.3568 2.65988" stroke="currentColor" stroke-width="1.25" stroke-linecap="square" stroke-linejoin="round"></path>
+                                  <path d="M14.3964 7.65988H8.14162C7.00848 7.65988 5.92158 8.07614 5.0775 8.81615L3.08301 10.5784" stroke="currentColor" stroke-width="1.25" stroke-linecap="square" stroke-linejoin="round"></path>
+                                </svg>
+                              </div>
+                              <span>Share</span>
+                            </button>
+                            <button style="--ai-bg: var(--mantine-color-default); --ai-hover: var(--mantine-color-default-hover); --ai-color: var(--mantine-color-default-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid var(--mantine-color-default-border); width: fit-content; height: fit-content;" class="focusClass mantine-active _root_whn7r_2 _mobileButton_17udp_33 m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root" data-variant="default" type="button" aria-label="Run app">
+                              <span class="m_8d3afb97 mantine-ActionIcon-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none">
+                                  <circle cx="32" cy="32" r="32" fill="#141414"></circle>
+                                  <path fill="var(--mantine-color-white)" d="M43.286 29.665c1.805 1.038 1.805 3.632 0 4.67l-16.249 9.34c-1.805 1.038-4.062-.259-4.062-2.335V22.66c0-2.076 2.257-3.373 4.062-2.335l16.249 9.34Z"></path>
+                                </svg>
+                              </span>
+                            </button>
+                            <button style="color: var(--mantine-color-black);" class="_bottomBarButton_w8xmm_1" aria-label="Remix">
+                              <div class="_icon_w8xmm_16">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none">
+                                  <circle cx="7" cy="9" r="6.25" stroke="currentcolor" stroke-width="1.5"></circle>
+                                  <mask id="a" fill="currentcolor">
+                                    <path fill-rule="evenodd" d="M11.344 14.49A6.981 6.981 0 0 1 9 15.71 7 7 0 1 0 9 2.29a6.98 6.98 0 0 1 2.344 1.22 5.5 5.5 0 0 1 0 10.98Z" clip-rule="evenodd"></path>
+                                  </mask>
+                                  <path fill="#000" fill-rule="evenodd" d="M11.344 14.49A6.981 6.981 0 0 1 9 15.71 7 7 0 1 0 9 2.29a6.98 6.98 0 0 1 2.344 1.22 5.5 5.5 0 0 1 0 10.98Z" clip-rule="evenodd"></path>
+                                  <path fill="currentcolor" d="m11.344 14.49-.092-1.498-.47.03-.37.292.932 1.175ZM9 15.71l-.428-1.438-4.83 1.438 4.83 1.438L9 15.71ZM9 2.29 8.572.852 3.742 2.29l4.83 1.438L9 2.29Zm2.344 1.22-.932 1.176.37.293.47.029.092-1.497Zm-.932 9.804a5.48 5.48 0 0 1-1.84.958l.856 2.876a8.481 8.481 0 0 0 2.848-1.483l-1.864-2.351Zm-1.84 3.834A8.5 8.5 0 0 0 11 17.5v-3c-.549 0-1.076-.08-1.572-.228l-.856 2.876ZM11 17.5A8.5 8.5 0 0 0 19.5 9h-3a5.5 5.5 0 0 1-5.5 5.5v3ZM19.5 9A8.5 8.5 0 0 0 11 .5v3A5.5 5.5 0 0 1 16.5 9h3ZM11 .5c-.841 0-1.657.123-2.428.352l.856 2.876A5.501 5.501 0 0 1 11 3.5v-3ZM8.572 3.728a5.48 5.48 0 0 1 1.84.958l1.864-2.351A8.481 8.481 0 0 0 9.428.852l-.856 2.876ZM18 9a7 7 0 0 0-6.564-6.987l-.184 2.995A4 4 0 0 1 15 9h3Zm-6.564 6.987A7 7 0 0 0 18 9h-3a4 4 0 0 1-3.748 3.992l.184 2.995Z" mask="url(#a)"></path>
+                                  <circle cx="7" cy="9" r="2.25" stroke="currentcolor"></circle>
+                                </svg>
+                              </div>
+                              <span>Remix</span>
+                            </button>
+                            <button style="color: var(--mantine-color-black);" class="_bottomBarButton_w8xmm_1" aria-label="Snapshot">
+                              <div class="_icon_w8xmm_16">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none">
+                                  <path stroke="currentcolor" stroke-width="1.5" d="M1.75 6.75a2 2 0 0 1 2-2h1.108a.25.25 0 0 0 .215-.121L6.427 2.37a.25.25 0 0 1 .215-.121h4.716a.25.25 0 0 1 .215.121l1.354 2.258a.25.25 0 0 0 .215.121h1.108a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H3.75a2 2 0 0 1-2-2v-7Z"></path>
+                                  <circle cx="9" cy="10" r="2.75" stroke="currentcolor" stroke-width="1.5"></circle>
+                                </svg>
+                              </div>
+                              <span>Snapshot</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div style="--overlay-z-index: 500; z-index: 2; transition: 300ms linear; pointer-events: none; opacity: 0; background: rgb(20, 20, 20); backdrop-filter: none;" class="_root_1bzfl_2 m_9814e45f mantine-Overlay-root" id="grid-overlay"></div>
+                    </div>
+                  </div>
+                </div>
+                <footer style="padding-bottom: var(--footer-padding);">
+                  <div style="gap: var(--mantine-spacing-md); align-items: start; justify-content: space-between; flex-flow: column wrap; width: 100%;" class="_inner_6jirq_11 m_8bffd616 mantine-Flex-root __m__-r28">
+                    <div style="--stack-gap: var(--mantine-spacing-md); --stack-align: stretch; --stack-justify: space-between;" class="m_6d731127 mantine-Stack-root">
+                      <div style="--stack-gap: 0rem; --stack-align: stretch; --stack-justify: flex-start;" class="_feedbackAndSocials_6jirq_37 m_6d731127 mantine-Stack-root">
+                        <div style="--group-gap: var(--mantine-spacing-xxs); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;" class="m_4081bf90 mantine-Group-root">
+                          <button style="--button-height: var(--button-height-sm); --button-padding-x: var(--button-padding-x-sm); --button-fz: var(--mantine-font-size-sm);" class="focusClass mantine-active _root_wau0q_2 _feedbackButton_6jirq_41 m_77c9d27d mantine-Button-root m_87cf2631 mantine-UnstyledButton-root" data-variant="unstyled" data-size="sm" type="button">
+                            <span class="_inner_wau0q_154 m_80f1301b mantine-Button-inner">
+                              <span class="m_811560b9 mantine-Button-label">Submit Feedback</span>
+                            </span>
+                          </button>
+                          <a style="--ai-bg: var(--mantine-color-default); --ai-hover: var(--mantine-color-default-hover); --ai-color: var(--mantine-color-default-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid var(--mantine-color-default-border);" class="focusClass mantine-active _root_whn7r_2 m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root" data-variant="default" aria-label="Join our community on Discord" rel="noreferrer" href="https://discord.gg/5HQuq8HaeQ" target="_blank">
+                            <span class="m_8d3afb97 mantine-ActionIcon-icon">
+                              <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.4728 6.47852C18.1981 5.89362 16.8311 5.46269 15.4019 5.21588C15.3759 5.21112 15.3499 5.22302 15.3365 5.24683C15.1607 5.55951 14.9659 5.96742 14.8296 6.28804C13.2923 6.0579 11.763 6.0579 10.2573 6.28804C10.1209 5.9603 9.91906 5.55951 9.74247 5.24683C9.72906 5.22381 9.70306 5.21191 9.67703 5.21588C8.24858 5.4619 6.88163 5.89283 5.6061 6.47852C5.59506 6.48328 5.5856 6.49123 5.57932 6.50154C2.98649 10.3752 2.2762 14.1536 2.62464 17.8852C2.62622 17.9034 2.63647 17.9209 2.65066 17.932C4.36133 19.1883 6.01841 19.9509 7.64472 20.4565C7.67075 20.4644 7.69833 20.4549 7.71489 20.4335C8.0996 19.9081 8.44253 19.3542 8.73656 18.7716C8.75391 18.7375 8.73734 18.697 8.70188 18.6835C8.15794 18.4772 7.63999 18.2256 7.14177 17.9399C7.10236 17.9169 7.0992 17.8605 7.13546 17.8336C7.2403 17.755 7.34518 17.6733 7.44529 17.5907C7.4634 17.5756 7.48864 17.5725 7.50994 17.582C10.7831 19.0764 14.3266 19.0764 17.5611 17.582C17.5824 17.5717 17.6077 17.5749 17.6266 17.5899C17.7267 17.6725 17.8315 17.755 17.9372 17.8336C17.9734 17.8605 17.9711 17.9169 17.9317 17.9399C17.4334 18.2312 16.9155 18.4772 16.3708 18.6827C16.3353 18.6962 16.3195 18.7375 16.3369 18.7716C16.6372 19.3533 16.9801 19.9073 17.3577 20.4327C17.3735 20.4549 17.4019 20.4644 17.4279 20.4565C19.0621 19.9509 20.7192 19.1883 22.4299 17.932C22.4448 17.9209 22.4543 17.9042 22.4559 17.886C22.8729 13.5718 21.7574 9.82441 19.4988 6.50232C19.4933 6.49123 19.4839 6.48328 19.4728 6.47852ZM9.22534 15.613C8.23991 15.613 7.42794 14.7083 7.42794 13.5973C7.42794 12.4862 8.22416 11.5815 9.22534 11.5815C10.2344 11.5815 11.0385 12.4941 11.0227 13.5973C11.0227 14.7083 10.2265 15.613 9.22534 15.613ZM15.8709 15.613C14.8855 15.613 14.0736 14.7083 14.0736 13.5973C14.0736 12.4862 14.8698 11.5815 15.8709 11.5815C16.88 11.5815 17.6841 12.4941 17.6684 13.5973C17.6684 14.7083 16.88 15.613 15.8709 15.613Z" fill="#666666"></path>
+                              </svg>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div style="--stack-gap: 0rem; --stack-align: stretch; --stack-justify: flex-start;" class="_copyrightSection_6jirq_33 m_6d731127 mantine-Stack-root">
+                      <p class="focusClass _root_vbrev_2 m_b6d8b162 mantine-Text-root">PartyRock, an Amazon Bedrock playground</p>
+                      <p class="focusClass _root_vbrev_2 m_b6d8b162 mantine-Text-root">©2023 Amazon Web Services, Inc. or its affiliates. All rights reserved.</p>
+                    </div>
+                    <div style="margin: 0rem; padding: 0rem;" class="_legalSectionGrid_6jirq_19 m_7485cace mantine-Container-root">
+                      <a class="focusClass _root_vbrev_2 _root_d73bm_2 m_849cf0da m_b6d8b162 mantine-Text-root mantine-Anchor-root" data-variant="muted" data-underline="hover" tabindex="0" href="/service-terms" data-discover="true">
+                        <p class="focusClass _root_vbrev_2 m_b6d8b162 mantine-Text-root">Terms of Service</p>
+                      </a>
+                      <a class="focusClass _root_vbrev_2 _root_d73bm_2 m_849cf0da m_b6d8b162 mantine-Text-root mantine-Anchor-root" data-variant="muted" data-underline="hover" tabindex="0" href="/privacy" data-discover="true">
+                        <p class="focusClass _root_vbrev_2 m_b6d8b162 mantine-Text-root">Privacy</p>
+                      </a>
+                      <a class="focusClass _root_vbrev_2 _root_d73bm_2 m_849cf0da m_b6d8b162 mantine-Text-root mantine-Anchor-root" data-variant="muted" data-underline="hover" tabindex="0" href="https://aws.amazon.com/terms/" target="_blank" rel="noreferrer">
+                        <p class="focusClass _root_vbrev_2 m_b6d8b162 mantine-Text-root">Site Terms</p>
+                      </a>
+                      <a class="focusClass _root_vbrev_2 _root_d73bm_2 m_849cf0da m_b6d8b162 mantine-Text-root mantine-Anchor-root" data-variant="muted" data-underline="hover" tabindex="0" role="button">
+                        <p class="focusClass _root_vbrev_2 m_b6d8b162 mantine-Text-root">EULAs</p>
+                      </a>
+                      <a class="focusClass _root_vbrev_2 _root_d73bm_2 m_849cf0da m_b6d8b162 mantine-Text-root mantine-Anchor-root" data-variant="muted" data-underline="hover" tabindex="0" href="/community-guidelines" data-discover="true">
+                        <p class="focusClass _root_vbrev_2 m_b6d8b162 mantine-Text-root">Community Guidelines</p>
+                      </a>
+                      <a class="focusClass _root_vbrev_2 _root_d73bm_2 m_849cf0da m_b6d8b162 mantine-Text-root mantine-Anchor-root" data-variant="muted" data-underline="hover" tabindex="0" href="https://aws.amazon.com/legal/" target="_blank" rel="noreferrer">
+                        <p class="focusClass _root_vbrev_2 m_b6d8b162 mantine-Text-root">Legal</p>
+                      </a>
+                      <a class="focusClass _root_vbrev_2 _root_d73bm_2 m_849cf0da m_b6d8b162 mantine-Text-root mantine-Anchor-root" data-variant="muted" data-underline="hover" tabindex="0" role="button">
+                        <p class="focusClass _root_vbrev_2 m_b6d8b162 mantine-Text-root">Report Abuse</p>
+                      </a>
+                      <a class="focusClass _root_vbrev_2 _root_d73bm_2 m_849cf0da m_b6d8b162 mantine-Text-root mantine-Anchor-root" data-variant="muted" data-underline="hover" tabindex="0" role="button" rel="noreferrer">
+                        <p class="focusClass _root_vbrev_2 m_b6d8b162 mantine-Text-root">Manage Cookies</p>
+                      </a>
+                    </div>
+                  </div>
+                </footer>
+              </div>
+            </div>
+          </div>
+          <div data-state="hidden" class="_scrollbar_6txj5_5 m_c44ba933 mantine-ScrollArea-scrollbar" data-orientation="vertical" style="position: absolute; --sa-thumb-height: 18px;" data-mantine-scrollbar="true">
+            <div data-state="visible" class="m_d8b5e363 mantine-ScrollArea-thumb" style="width: var(--sa-thumb-width); height: var(--sa-thumb-height); --thumb-opacity: 0; transform: translate3d(0px, -22px, 0px);"></div>
+          </div>
+        </div>
+        <aside id="split-panel-portal" class="_splitPanelPortal_1yzkk_18"></aside>
+      </div>
+    </main>
+    <div class="_catbotContainer_122se_1" aria-haspopup="dialog" aria-expanded="true" aria-controls="mantine-nyv81uiky-dropdown" id="mantine-nyv81uiky-target">
+      <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.383789" width="30" height="30" rx="2" fill="var(--mantine-primary-color-3)"></rect>
+        <g clip-path="url(#clip0_355_5683)">
+          <path d="M18.9085 16.4889C19.6384 16.4889 20.2301 15.8972 20.2301 15.1673C20.2301 14.4374 19.6384 13.8457 18.9085 13.8457C18.1786 13.8457 17.5869 14.4374 17.5869 15.1673C17.5869 15.8972 18.1786 16.4889 18.9085 16.4889Z" fill="#141414"></path>
+          <path d="M11.8597 16.4889C12.5896 16.4889 13.1813 15.8972 13.1813 15.1673C13.1813 14.4374 12.5896 13.8457 11.8597 13.8457C11.1298 13.8457 10.5381 14.4374 10.5381 15.1673C10.5381 15.8972 11.1298 16.4889 11.8597 16.4889Z" fill="#141414"></path>
+          <path d="M15.3842 24.4535H10.9789C9.34016 24.4535 8.00977 23.1231 8.00977 21.4844" stroke="#141414" stroke-width="1.25"></path>
+          <path d="M15.3838 24.4535H19.7891C21.4278 24.4535 22.7582 23.1231 22.7582 21.4844" stroke="#141414" stroke-width="1.25"></path>
+          <path d="M15.3838 18.4453C15.3838 19.3087 16.0974 20.0224 16.9609 20.0224C17.3309 20.0224 17.6922 19.8902 17.9741 19.6524" stroke="#141414" stroke-width="1.25" stroke-linejoin="round"></path>
+          <path d="M15.3841 18.4451L14.8379 17.3438H15.9392L15.3841 18.4451Z" stroke="#141414" stroke-width="1.25" stroke-linejoin="round"></path>
+          <path d="M15.3877 18.4453C15.3877 19.3087 14.674 20.0224 13.8106 20.0224C13.4406 20.0224 13.0793 19.8902 12.7974 19.6524" stroke="#141414" stroke-width="1.25" stroke-linejoin="round"></path>
+          <path d="M24.8118 20.2953L19.8955 18.1279H25.5431" stroke="#141414" stroke-width="1.25" stroke-linejoin="round"></path>
+          <path d="M5.95686 20.2953L10.8732 18.1279H5.22559" stroke="#141414" stroke-width="1.25" stroke-linejoin="round"></path>
+          <path d="M14.2565 9.69568L8.00977 5.5459V15.6957" stroke="#141414" stroke-width="1.25" stroke-linejoin="round"></path>
+          <path d="M16.5117 9.69568L22.7672 5.5459V15.6957" stroke="#141414" stroke-width="1.25" stroke-linejoin="round"></path>
+          <path d="M8.00977 15.3076V12.6733C8.00977 11.0345 9.34016 9.69531 10.9877 9.69531H19.7983C21.4371 9.69531 22.7763 11.0257 22.7763 12.6733V15.3076" stroke="#141414" stroke-width="1.25"></path>
+        </g>
+        <defs>
+          <clipPath id="clip0_355_5683">
+            <rect width="20.3172" height="20" fill="white" transform="translate(5.22559 5)"></rect>
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  </div>
+  <div style="display: none;" id="captcha-modal">
+    <div>
+      <div style="--modal-size: var(--modal-size-md); --modal-y-offset: 5dvh; --mb-z-index: 502;" class="_root_1oasz_2 m_9df02822 mantine-Modal-root" data-variant="retro" data-size="md" data-centered="true">
+        <div style="--overlay-z-index: 502; transition-property: opacity; transition-duration: 200ms; transition-timing-function: ease; opacity: 1;" class="_root_1bzfl_2 mantine-Modal-overlay m_9814e45f mantine-Overlay-root" data-fixed="true"></div>
+        <div class="m_60c222c7 m_1f958f16 mantine-Modal-inner">
+          <section style="transition-property: opacity, transform; transition-duration: 200ms; transition-timing-function: ease; opacity: 1; transform: translateY(0px);" class="_root_88bld_2 m_fd1ab0aa _content_1oasz_2 m_54c44539 mantine-Modal-content m_1b7284a3 mantine-Paper-root" data-modal-content="true" role="dialog" tabindex="-1" aria-modal="true" aria-describedby="mantine-2wf18qun6-body">
+            <div class="m_5df29311 _body_1oasz_6 mantine-Modal-body" id="mantine-2wf18qun6-body">
+              <div id="captcha"></div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script nonce="" type="module" src="/website/9b701471f43f55c81eff/index.js"></script>
+<link nonce="" rel="stylesheet" type="text/css" href="/website/9b701471f43f55c81eff/index.css">
+<div data-portal="true" style="display: contents;">
+  <div>
+    <div style="--modal-y-offset: 5dvh; --mb-z-index: 201;" class="_root_1oasz_2 m_9df02822 mantine-Modal-root" data-variant="retro" data-centered="true"></div>
+  </div>
+</div>
+<div data-portal="true" style="display: contents;">
+  <div style="--notifications-z-index: 600; --notifications-container-width: calc(27.5rem * var(--mantine-scale));" class="m_b37d9ac7 mantine-Notifications-root" data-position="top-center" aria-live="polite">
+    <div></div>
+  </div>
+  <div style="--notifications-z-index: 600; --notifications-container-width: calc(27.5rem * var(--mantine-scale));" class="m_b37d9ac7 mantine-Notifications-root" data-position="top-left" aria-live="polite">
+    <div></div>
+  </div>
+  <div style="--notifications-z-index: 600; --notifications-container-width: calc(27.5rem * var(--mantine-scale));" class="m_b37d9ac7 mantine-Notifications-root width-before-scroll-bar" data-position="top-right" aria-live="polite">
+    <div></div>
+  </div>
+  <div style="--notifications-z-index: 600; --notifications-container-width: calc(27.5rem * var(--mantine-scale));" class="m_b37d9ac7 mantine-Notifications-root width-before-scroll-bar" data-position="bottom-right" aria-live="polite">
+    <div></div>
+  </div>
+  <div style="--notifications-z-index: 600; --notifications-container-width: calc(27.5rem * var(--mantine-scale));" class="m_b37d9ac7 mantine-Notifications-root" data-position="bottom-left" aria-live="polite">
+    <div></div>
+  </div>
+  <div style="--notifications-z-index: 600; --notifications-container-width: calc(27.5rem * var(--mantine-scale));" class="m_b37d9ac7 mantine-Notifications-root" data-position="bottom-center" aria-live="polite">
+    <div></div>
+  </div>
+</div>
+<div data-portal="true" style="display: contents;"></div>
+<div data-portal="true" style="display: contents;">
+  <div style="--popover-shadow: var(--mantine-shadow-floating); transition-property: opacity; transition-duration: 150ms; transition-timing-function: ease; opacity: 1; z-index: 300; top: 326.8px; left: 52.5px; width: calc(18.75rem * var(--mantine-scale)); padding: 0rem; background: rgb(248, 247, 241);" class="_dropdown_mkvl4_2 m_38a85659 mantine-Popover-dropdown" aria-labelledby="mantine-nyv81uiky-target" id="mantine-nyv81uiky-dropdown" role="dialog" tabindex="-1" data-position="right-end">
+    <div style="gap: 0rem; align-items: start; justify-content: space-between;" class="m_8bffd616 mantine-Flex-root __m__-r3l">
+      <div style="--stack-gap: var(--mantine-spacing-md); --stack-align: stretch; --stack-justify: flex-start; padding: var(--mantine-spacing-xs);" class="m_6d731127 mantine-Stack-root">Want to use the app to generate contents with AI? You can even create your own AI app like this! <button style="--button-height: var(--button-height-sm); --button-padding-x: var(--button-padding-x-sm); --button-fz: var(--mantine-font-size-sm); width: fit-content;" class="focusClass mantine-active _root_wau0q_2 m_77c9d27d mantine-Button-root m_87cf2631 mantine-UnstyledButton-root" data-variant="inverted" data-size="sm" data-with-left-section="true" type="button">
+          <span class="_inner_wau0q_154 m_80f1301b mantine-Button-inner">
+            <span class="m_a74036a mantine-Button-section" data-position="left">
+              <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_94_8418)">
+                  <line x1="7.95609" y1="7.73141" x2="10.1004" y2="9.87569" stroke="currentColor"></line>
+                  <path d="M5.82617 3.50977H8.6748" stroke="currentColor" stroke-width="0.75" stroke-linecap="round"></path>
+                  <path d="M7.25 1.97461L7.25 5.04492" stroke="currentColor" stroke-width="0.75" stroke-linecap="round"></path>
+                  <path d="M12.6094 3.50977H15.458" stroke="currentColor" stroke-width="0.75" stroke-linecap="round"></path>
+                  <path d="M14.0332 1.97461L14.0332 5.04492" stroke="currentColor" stroke-width="0.75" stroke-linecap="round"></path>
+                  <path d="M12.6094 10.6924H15.458" stroke="currentColor" stroke-width="0.75" stroke-linecap="round"></path>
+                  <path d="M14.0332 9.15723L14.0332 12.2275" stroke="currentColor" stroke-width="0.75" stroke-linecap="round"></path>
+                  <rect x="1.50398" y="13.9463" width="11.9222" height="3.17578" rx="0.5" transform="rotate(-45 1.50398 13.9463)" stroke="currentColor"></rect>
+                </g>
+                <defs>
+                  <clipPath id="clip0_94_8418">
+                    <rect width="16" height="16" fill="white" transform="translate(0.97168 0.683594)"></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+            </span>
+            <span class="m_811560b9 mantine-Button-label">Join the party</span>
+          </span>
+        </button>
+      </div>
+      <button class="focusClass mantine-active _root_whn7r_2 m_220c80f2 m_86a44da5 mantine-CloseButton-root m_87cf2631 mantine-UnstyledButton-root" data-variant="subtle" type="button">
+        <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: var(--cb-icon-size, 70%); height: var(--cb-icon-size, 70%);">
+          <path d="M11.7816 4.03157C12.0062 3.80702 12.0062 3.44295 11.7816 3.2184C11.5571 2.99385 11.193 2.99385 10.9685 3.2184L7.50005 6.68682L4.03164 3.2184C3.80708 2.99385 3.44301 2.99385 3.21846 3.2184C2.99391 3.44295 2.99391 3.80702 3.21846 4.03157L6.68688 7.49999L3.21846 10.9684C2.99391 11.193 2.99391 11.557 3.21846 11.7816C3.44301 12.0061 3.80708 12.0061 4.03164 11.7816L7.50005 8.31316L10.9685 11.7816C11.193 12.0061 11.5571 12.0061 11.7816 11.7816C12.0062 11.557 12.0062 11.193 11.7816 10.9684L8.31322 7.49999L11.7816 4.03157Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+        </svg>
+      </button>
+    </div>
+    <div class="_arrow_mkvl4_6 m_a31dc6c1 mantine-Popover-arrow" style="width: 7px; height: 7px; transform: rotate(45deg); position: absolute; border-bottom-left-radius: 0px; bottom: 5px; left: -3.5px; border-right-color: transparent; border-top-color: transparent; clip-path: polygon(0px 100%, 0px 0px, 100% 100%);"></div>
+  </div>
+</div>
+<script src="https://prod.assets.shortbread.aws.dev/shortbread.js"></script>
+<link href="https://prod.assets.shortbread.aws.dev/shortbread.css" rel="stylesheet">
+<textarea tabindex="-1" aria-hidden="true" style="min-height: 0px !important; max-height: none !important; height: 0px !important; visibility: hidden !important; overflow: hidden !important; position: absolute !important; z-index: -1000 !important; top: 0px !important; right: 0px !important; display: block !important; border-width: 1px 0px 0px; box-sizing: border-box; font-family: DM Sans, sans-serif; font-size: 16px; font-style: normal; font-weight: 500; letter-spacing: normal; line-height: 24.8px; padding: 12px 36px 12px 24px; tab-size: 8; text-indent: 0px; text-rendering: optimizelegibility; text-transform: none; width: 115px; word-break: normal; word-spacing: 0px; scrollbar-gutter: auto;"></textarea>
+<div data-portal="true" style="display: contents;">
+  <div>
+    <div style="--modal-y-offset: 5dvh; --mb-z-index: 500;" class="_root_1oasz_2 m_9df02822 mantine-Modal-root" data-variant="full" data-full-screen="true" data-centered="true"></div>
+  </div>
+</div>
+<div data-portal="true" style="display: contents;">
+  <div>
+    <div style="--modal-y-offset: 5dvh; --mb-z-index: 500;" class="_root_1oasz_2 m_9df02822 mantine-Modal-root" data-variant="full" data-full-screen="true" data-centered="true"></div>
+  </div>
+</div>
+<div data-portal="true" style="display: contents;">
+  <div>
+    <div style="--modal-y-offset: 5dvh; --mb-z-index: 500;" class="_root_1oasz_2 m_9df02822 mantine-Modal-root" data-variant="full" data-full-screen="true" data-centered="true"></div>
+  </div>
+</div>
+<div data-portal="true" style="display: contents;">
+  <div>
+    <div style="--modal-y-offset: 5dvh; --mb-z-index: 500;" class="_root_1oasz_2 m_9df02822 mantine-Modal-root" data-variant="full" data-full-screen="true" data-centered="true"></div>
+  </div>
+</div>
+<div data-portal="true" style="display: contents;">
+  <div>
+    <div style="--modal-y-offset: 5dvh; --mb-z-index: 500;" class="_root_1oasz_2 m_9df02822 mantine-Modal-root" data-variant="full" data-full-screen="true" data-centered="true"></div>
+  </div>
+</div>
+<div data-portal="true" style="display: contents;">
+  <div>
+    <div style="--modal-y-offset: 5dvh; --mb-z-index: 500;" class="_root_1oasz_2 m_9df02822 mantine-Modal-root" data-variant="full" data-full-screen="true" data-centered="true"></div>
+  </div>
+</div>
+<div data-portal="true" style="display: contents;">
+  <div>
+    <div style="--modal-y-offset: 5dvh; --mb-z-index: 500;" class="_root_1oasz_2 m_9df02822 mantine-Modal-root" data-variant="full" data-full-screen="true" data-centered="true"></div>
+  </div>
+</div>
+<div data-portal="true" style="display: contents;">
+  <div>
+    <div style="--modal-y-offset: 5dvh; --mb-z-index: 500;" class="_root_1oasz_2 m_9df02822 mantine-Modal-root" data-variant="full" data-full-screen="true" data-centered="true"></div>
+  </div>
+</div>
+<div data-portal="true" style="display: contents;"></div>
+<div data-portal="true" style="display: contents;"></div>
+</body>
+</html>
+
